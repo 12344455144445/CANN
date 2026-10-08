@@ -1,0 +1,136 @@
+--- v45 (kernel_v45_allocfirst.asc)
++++ v49 (kernel_v49_nohandshake.asc)
+@@ -1,28 +1,34 @@
+ // ============================================================================
+-// QuantMatmulReluQuant —— v45（诊断版：只把 yScaleQueue.AllocTensor 上移，纯重排）
++// QuantMatmulReluQuant —— v49（极小形状：跨核握手整段免除）
+ //
+ // ——— 本版唯一改动 ———
+-// 基线：v40（sha256 57a7ac3ee4803e79，平台 15/15，读数总分 23.3818 —— 当前最优）
+-// [OPT-V45-B1] 把 `LocalTensor<float> yScaleLocal = yScaleQueue.AllocTensor<float>();`
+-//   从「第一个行循环 + PipeBarrier 之后」提到「两个行循环之前」；两个行循环本身
+-//   一字未改、保持独立。
+-//   ★ 诊断目的：v42（= v40 + A + B + C）实测真实回归 +17.85%（4381.50 µs vs v40 的
+-//     3717.95 µs，两次读数差 0.336% ⇒ 可复现）。v44（= v40 + A）落快簇
+-//     （3690.41 µs，全项目最低总耗时）⇒ A 无罪；C 只作用于 N>=2048 的 6 个点而
+-//     该组回归反而更小 ⇒ C 不能解释高组 ⇒ 元凶只能在 B。
+-//   B 的原子性：合并后的循环要往 yScaleLocal 写值 ⇒ 合并【必须】先把 AllocTensor
+-//     提到循环之前 ⇒ B 的全部相对顺序变化只有两处：
+-//       (i)  AllocTensor vs 第一个行循环   （v40: 循环在前；v42: AllocTensor 在前）
+-//       (ii) PipeBarrier  vs AllocTensor   （v40: barrier 在前；v42: barrier 在后）
+-//     本版把 (i)(ii) 两处都提前复刻，但**不合并循环** ⇒ 精确隔离「顺序」这一半。
+-//
+-// ★ 本版是**纯重排**：活代码行的多重集与 v40 完全相同（只有顺序变了）。
+-// 等价算法路径：AllocTensor 只是从 yScaleQueue 自己的 TBuf 里取一块空闲缓冲，
+-//   与 rowMaxLocal / rowScaleLocal 不同源、不别名；两个行循环的读写集合与顺序
+-//   一字未改，写进 yScaleLocal 的值逐位相同。v42 已做过同一处搬移并实测
+-//   15/15 Pass、输出错误占比全 0.00% ⇒ 该搬移本身合法且已平台验证。
+-// 精度红线函数（QmqQuantizeNearHalf / QmqDiv / QmqCorrectDiv）一行未动。
+-// 回退：把 AllocTensor 那一行原样移回 = 逐字节等于 v40（生成器 A11 已证）。
++// 基线：v45（sha256 1052cfef14de53aa，平台 15/15，读数 23.3537 / 3706.57 µs —— 当前最优）
++// [OPT-V49-H1] 极小形状（QmqTinyShape(m, n, k) 为真）下，AIC 的三个「提前返回
++//   但补齐全部跨核 flag」分支不再执行 QmqCubeSignalAllFlags。
++// [OPT-V49-H2] 同一判定下，AIV 不再执行 CrossCoreWaitFlag<2, PIPE_FIX>(8/9)。
++// [OPT-V49-H3] AIV 把 QmqTinyShape(m, n, k) 提到 localTile 循环之外存为
++//   const bool（纯公共子表达式消除），循环内判定结果逐位不变。
++//   其余形状：AIC 与 AIV 两侧一字未改。
++//
++// ★ 等价算法路径（逐位）：极小形状下 C 由本 AIV 自己算出（QmqComputeTinyC 逐行
++//   点积写 workspace），AIV 的 Pass-1 / Pass-2 只读本 AIV 刚写进 workspace 的
++//   行区间，y / yScale 也由本 AIV 写出 ⇒ AIV 对 AIC 没有任何数据依赖，
++//   那条跨核 Wait 本身是空等 ⇒ 免去它不改变任何读写集合与数值路径。
++//   Set/Wait 配平：两侧用同一个纯函数 QmqTinyShape(m, n, k) 做门控，而 m/n/k 由
++//   host 以同一组值分别传给 AIC 与 AIV ⇒ 两侧判定恒等 ⇒ 极小形状下 Set 与 Wait
++//   同时为 0，flag 计数器零变化，不产生悬空 flag（E22 的配平不变）。
++//   精度红线函数（QmqQuantizeNearHalf / QmqDiv / QmqCorrectDiv）一行未动，仍由
++//   Pass-1 / Pass-2 原样调用；Pass-2 行体与掩码扫描区逐字节未改（E112 安全）。
++//
++// ★ 立项依据：点 1 = (M=4,N=8,K=16) 只有一条 mmad、点 2 的 T 只有 1.77 µs，而
++//   我们在 v20/v35/v37/v38/v39 五版里的读数是 10.28 ~ 10.68 µs —— 五版机器码
++//   各异而读数不变 ⇒ 固定开销。三个候选已被实测否证：host 侧（v21：PATCH-H1/H2
++//   只值 0.41%，噪声内）、AIC 入口（v40：整段拿掉收益 ≈ 0）、AIV 的
++//   QmqComputeTinyC 全长（v40 旁证 +0.30 µs）⇒ 剩下唯一未标定的就是
++//   「AIV 被 AIC 的 flag 挡住」这一段串行等待。本版免去它，同时给出 O 的成分标定。
++//   价值（analysis/39 §4.2）：点 1/2/3 共值 +4.9 分，是 v20 全部改动的 7 倍。
++//
++// 回退：把三处 AIC 置位与一处 AIV Wait 原样还原 = 逐字节等于 v45（生成器 A11 已证）。
+ // ——— 以下为 v40 的历史版本说明，保留备查 ———
+ //
+ // ——— 本版改动摘要 ———
+@@ -609,17 +615,20 @@
+         n == 0 || k == 0) {
+         // [OPT-V17C] 提前返回也必须置位全部 flag（对应 AIV 已进入 Wait）。
+         // 按 mBlocksPerGroup 补齐，不能固定补 2 个（会留下悬空 flag）。
+-        QmqCubeSignalAllFlags(mBlocksPerGroup);
+-        return;
+-    }
+-
+-    // [OPT-V40] 极小形状旁路：本函数不参与计算（C 由 AIV 自行算出），
+-    // 但仍照常置位全部跨核 flag ⇒ AIV 的 Wait 结构与基线完全一致，
+-    // E22 的 Set/Wait 配平不变。
++        // [OPT-V49-H1] 唯一例外：极小形状下 AIV 用同一判定同时免去 Wait
++        // ⇒ 两侧同时不收发，计数器零变化（否则会留下悬空 flag，见 v17b 注释）。
++        if (!QmqTinyShape(m, n, k)) {
++            QmqCubeSignalAllFlags(mBlocksPerGroup);
++        }
++        return;
++    }
++
++    // [OPT-V40] 极小形状旁路：本函数不参与计算（C 由 AIV 自行算出）。
+     // 关键收益：本分支位于 TPipe / matmul::Matmul / REGIST_MATMUL_OBJ 之前，
+     // 因此这三笔与形状无关的入场成本在小形状上被整段省掉。
++    // [OPT-V49-H1] 本分支不再置位跨核 flag：AIV 侧用同一判定同时免去 Wait
++    // （见 quant_matmul_relu_quant_fused），两侧配平 ⇒ 无悬空 flag。
+     if (QmqTinyShape(m, n, k)) {
+-        QmqCubeSignalAllFlags(mBlocksPerGroup);
+         return;
+     }
+ 
+@@ -627,8 +636,12 @@
+     const uint32_t firstMBlock = groupIndex * mBlocksPerGroup;
+     const uint32_t firstMOffset = firstMBlock * static_cast<uint32_t>(tiling.singleCoreM);
+     if (firstMOffset >= m) {
+-        // [OPT-V17C] 本 AIC group 无任何 mBlock，但仍须置位全部 flag。
+-        QmqCubeSignalAllFlags(mBlocksPerGroup);
++        // [OPT-V49-H1] 本 AIC group 无任何 mBlock。极小形状下 AIV 也不等待
++        // ⇒ 两侧同时不收发，计数器零变化；其余形状仍须补齐全部 flag（对应
++        // AIV 已进入 Wait），与 v45 逐字相同。
++        if (!QmqTinyShape(m, n, k)) {
++            QmqCubeSignalAllFlags(mBlocksPerGroup);
++        }
+         return;
+     }
+ 
+@@ -1092,11 +1105,19 @@
+         const uint32_t blockM = static_cast<uint32_t>(tiling.singleCoreM);
+         const uint32_t halfM = (blockM + 1U) / 2U;
+ 
++        // [OPT-V49-H2] 极小形状：C 由本 AIV 自算、y / yScale 也由本 AIV 写出
++        // ⇒ 与 AIC 没有任何数据依赖，跨核 Wait 是空等，直接免去。
++        // 门控与 AIC 侧同为一个纯函数 QmqTinyShape(m, n, k)，且 m/n/k 两侧取值
++        // 完全相同 ⇒ Set / Wait 同时为 0，flag 配平零变化（E22）。
++        const bool tinyShape = QmqTinyShape(m, n, k);   // [OPT-V49-H3] 纯 CSE
++
+         for (uint32_t localTile = 0; localTile < mBlocksPerGroup; ++localTile) {
+-            if (localTile == 0U) {
+-                CrossCoreWaitFlag<2, PIPE_FIX>(kCubeToVectorFlag);
+-            } else {
+-                CrossCoreWaitFlag<2, PIPE_FIX>(kCubeToVectorFlagB);
++            if (!tinyShape) {
++                if (localTile == 0U) {
++                    CrossCoreWaitFlag<2, PIPE_FIX>(kCubeToVectorFlag);
++                } else {
++                    CrossCoreWaitFlag<2, PIPE_FIX>(kCubeToVectorFlagB);
++                }
+             }
+ 
+             const uint32_t mBlockIndex = groupIdx * mBlocksPerGroup + localTile;
+@@ -1124,7 +1145,7 @@
+             // 这里由本 AIV 自己把 C 的点积算出来写进 workspace。
+             // 只写自己负责的行区间，随后的 Pass-1 / Pass-2 也只读这一段，
+             // 所以不同 AIV 之间没有数据依赖，不需要额外同步。
+-            if (QmqTinyShape(m, n, k)) {
++            if (tinyShape) {
+                 QmqComputeTinyC(
+                     x1, x2, workspace, m, n, k, localStart, localRows);
+             }

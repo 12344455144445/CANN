@@ -1,0 +1,16 @@
+# 工具依赖闭包（本地模块，全部已包含在 05_tools/）
+# 生成方法：正则扫 ^\s*(import|from)\s+([A-Za-z_]\w*)，只保留 ref/ 下实际存在的 .py
+
+cover_check_v17c
+cover_check_v22
+cpp_preprocess_check
+livecode_diff
+precision_guard
+scope_check
+score_v48_live
+selfcheck_all
+sig_check
+static_check
+submit_check
+sync_check
+# 共 12 个模块 —— 缺任何一个，selfcheck_all.py 都会 ModuleNotFoundError 而判「不可提交」
