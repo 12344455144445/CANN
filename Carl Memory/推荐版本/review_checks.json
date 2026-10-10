@@ -1,0 +1,53 @@
+{
+  "review_pass": true,
+  "sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+  "unchanged_functions": [
+    "QmqQuantizeNearHalf",
+    "QmqDiv",
+    "QmqCorrectDiv",
+    "quant_matmul_relu_quant_vector",
+    "quant_matmul_relu_quant_cube",
+    "quant_matmul_relu_quant_fused"
+  ],
+  "host_signature_unchanged": true,
+  "tiny_shape_configurations_checked": 229056,
+  "row_coverage_configurations_checked": 24576,
+  "direct_UB_upper_bound_bytes": 165952,
+  "fallback_tiny_UB_upper_bound_bytes": 16384,
+  "general_vector_UB_bytes": 170880,
+  "UB_buffers_mutually_exclusive": true,
+  "int32_dot_absolute_bound": 2097152,
+  "dot_exact_in_fp32": true,
+  "writes_to_GM_only_after_all_rows_valid": true,
+  "cpu_numerics": {
+    "random_quantization_values": 400000,
+    "near_half_values": 75000,
+    "matrix_shapes": 110,
+    "status": "PASS",
+    "limitation": "CPU integer-threshold arithmetic validation; NPU compiler, launch, and scalar multiplication order require platform validation."
+  },
+  "scale127_checks": {
+    "positive_finite_bits_tested": 1004573,
+    "status": "PASS",
+    "coverage": "Random fp32 incl subnormal, all exponent transitions and mantissa threshold neighbors. CPU proof, not NPU compiler validation."
+  },
+  "hardware_validation": "NOT RUN: platform compile/pass/timing still required",
+  "performance_risk": "NPU Cast/Mul/WholeReduceSum compilation, resource lifetimes and timing require platform validation.",
+  "SIMD_dot_checks": {
+    "status": "PASS",
+    "dot_layout_and_numeric_cases": 4772,
+    "max_padded_B_or_product_elements": 1984,
+    "coverage": "Every gated N,K pair; random and extremal -128 inputs, K crossing 32/64/96/128, zero rows",
+    "proof": "Each int8 and half input exact in fp32; integer products and partial sums bounded by 2097152 and exact in any reduction tree",
+    "limitation": "CPU layout and arithmetic proof. ASC overloads, DMA synchronization, compiler resources and hardware performance require platform validation."
+  },
+  "legacy_submit_check_result": "Type-insensitive CAST_NONE counter increases for exact INT8/half/fp32 conversions and retained original quantization casts; separately verified",
+  "resolved_legacy_guard_warning": "Four new casts are int8->half and half->fp32 only. Every INT8 value is exactly representable in both; official A3 Cast API supports CAST_NONE for these types. Original int32->fp32 RINT unchanged; all three precision functions byte-identical. This is a type-insensitive heuristic warning, not a changed precision function.",
+  "batch_quantization_checks": {
+    "status": "PASS",
+    "row_N_batch_configurations": 3072,
+    "true_output_values": 2458368,
+    "coverage": "Every rows 1..96 and N 1..32; per-row scales, half boundaries, zero rows, mask words, odd-row compare tail, int/half storage and GM packing",
+    "limitations": "CPU layout/correctness model; original near-half functions unchanged. Hardware compiler, DMA behavior, sync and timings still require platform regression."
+  }
+}

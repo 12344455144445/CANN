@@ -1,0 +1,12 @@
+{
+  "source_sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+  "tested_versions": [
+    "v76_tiny_batch_quant",
+    "v78_batch_repeat"
+  ],
+  "device_compilation": "PASS",
+  "test_points_passed_each_run": 15,
+  "error_percent_all_points": 0.0,
+  "scope": "设备提供的15个测试点，非所有可能输入。",
+  "pre_submit_review": "review_checks.json保留提交前状态，本文件为后续设备验证摘要。"
+}

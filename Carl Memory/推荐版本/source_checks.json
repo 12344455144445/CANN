@@ -1,0 +1,8 @@
+{
+  "sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+  "inverse_diff_exact": true,
+  "changed_function": "QmqTryTinyDirect only",
+  "dot_dequantization_scale_unchanged": true,
+  "row_storage_stride": 32,
+  "quantization": "Same vector precision pipeline as v75, across all rows with per-row divisors and correction scales"
+}

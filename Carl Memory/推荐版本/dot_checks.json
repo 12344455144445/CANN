@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "dot_layout_and_numeric_cases": 4772,
+  "max_padded_B_or_product_elements": 1984,
+  "coverage": "Every gated N,K pair; random and extremal -128 inputs, K crossing 32/64/96/128, zero rows",
+  "proof": "Each int8 and half input exact in fp32; integer products and partial sums bounded by 2097152 and exact in any reduction tree",
+  "limitation": "CPU layout and arithmetic proof. ASC overloads, DMA synchronization, compiler resources and hardware performance require platform validation."
+}

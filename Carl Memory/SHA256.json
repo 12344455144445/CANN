@@ -1,0 +1,74 @@
+{
+  "2026-10-10_工作总结.md": {
+    "bytes": 4319,
+    "base64_length": 5760,
+    "sha256": "cfcee8a6f821cb57125afa16802a9de7610746d4165b2221b22ca8b7dfed438a",
+    "git_blob_sha1": "e222df9ee648e0c8c6d306877374672508e82897"
+  },
+  "CANN_2026-10-10_技术交接.tar.xz": {
+    "bytes": 48336,
+    "base64_length": 64448,
+    "sha256": "fb2ce2e22c8cfb586bdd33d4ce785a5150d01f471a22e11eae908ae07800283b",
+    "git_blob_sha1": "b1f6a875ff737438d25a868744c38caa1c2519cd"
+  },
+  "CANN_续跑记忆.md": {
+    "bytes": 1754,
+    "base64_length": 2340,
+    "sha256": "7ec6f95b2c97c75f4995f6cd58b8fbcf952aa2108f666ee192af6c7fdb8efa0c",
+    "git_blob_sha1": "e7ffd0d6471ce22233bd9067092e53b2411b5bb6"
+  },
+  "README.md": {
+    "bytes": 1101,
+    "base64_length": 1468,
+    "sha256": "9b30dcbd4baf1f6fae53867d1715bb4ce28590438928281fa524e6dc658a8e79",
+    "git_blob_sha1": "feb9dedf62c3cefe1e7f1160de966c339cae553a"
+  },
+  "实测记录/第三轮结果.json": {
+    "bytes": 2785,
+    "base64_length": 3716,
+    "sha256": "a0bc2b03524c177064b199dc4a75d955785ee5bc4fe3fce4cd7fb20c95c96501",
+    "git_blob_sha1": "c4c5bc2bff33f1b2fb2009c0778d783fa3defd18"
+  },
+  "实测记录/第三轮逐点耗时.csv": {
+    "bytes": 1099,
+    "base64_length": 1468,
+    "sha256": "578be287606c9b405d0ca258ad38463a52a9e2c42260ddd89937e2acdfa363b4",
+    "git_blob_sha1": "ec58e720f19622929ae77c075569b76c6c21fc76"
+  },
+  "推荐版本/batch_checks.json": {
+    "bytes": 431,
+    "base64_length": 576,
+    "sha256": "92db432b977bc88db0df622625d3dca7d644b87dad2122e9dfed826c86510cc7",
+    "git_blob_sha1": "e66f484b9d9fe6a4b9da1f8aea46c8b8053fc8d7"
+  },
+  "推荐版本/dot_checks.json": {
+    "bytes": 520,
+    "base64_length": 696,
+    "sha256": "5728eda3cc047a79b9917efffd7427539a47d20f4137d8843f1286c72e72595b",
+    "git_blob_sha1": "826f162af0755259e71cb50dfde4ee03c2b190f1"
+  },
+  "推荐版本/hardware_validation.json": {
+    "bytes": 462,
+    "base64_length": 616,
+    "sha256": "c9e6450129782c6a6481a0d1836505e212490828a31d8c113f0735a634fa5c93",
+    "git_blob_sha1": "7cd86f5aaa4fc6eb6b25c0a407491d4955dd4b7e"
+  },
+  "推荐版本/kernel.asc": {
+    "bytes": 83909,
+    "base64_length": 111880,
+    "sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+    "git_blob_sha1": "d9e0e833e1dcc6f5b60c1d67077a527eeb4430e9"
+  },
+  "推荐版本/review_checks.json": {
+    "bytes": 3074,
+    "base64_length": 4100,
+    "sha256": "637209a8278f4eb2f6616057eee0b37994e368b6c44449a6c32ce55e167811a9",
+    "git_blob_sha1": "77f8d5579628782e22b66a49bc065e852651507f"
+  },
+  "推荐版本/source_checks.json": {
+    "bytes": 360,
+    "base64_length": 480,
+    "sha256": "a6e23e186d4abf7837ff89d9b8d287241932b444d60ac029f56070073e3e85d8",
+    "git_blob_sha1": "ebeb6f12672ad5fec8593a2e2a2dc4bed0a858e9"
+  }
+}
