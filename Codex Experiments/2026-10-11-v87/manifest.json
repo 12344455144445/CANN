@@ -1,0 +1,9 @@
+{
+  "base_version": "v86",
+  "base_sha256": "13327d9537cb8b9f56c55db813b3b59793ab3d5eb5d406fcf77f27e94e0c347b",
+  "source_sha256": "ba07ecfc38b380abd731faf0a6314d6658e1a0e3fb0285f42128e47577c241f6",
+  "bytes": 88801,
+  "npu_status": "PENDING",
+  "base_device_evidence": "User screenshot: 15/15 Pass, all error rates0%, submission ID unavailable.",
+  "change": "General non32-aligned N64..3072 uses padded row batching; tiny functions/host/Cube unchanged."
+}

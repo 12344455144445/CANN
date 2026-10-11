@@ -1,0 +1,7 @@
+*.asc -text whitespace=cr-at-eol
+*.diff text eol=lf whitespace=-blank-at-eol
+*.cmd text eol=crlf
+*.ps1 text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
