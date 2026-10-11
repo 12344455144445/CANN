@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "row_N_batch_configurations": 3072,
+  "true_output_values": 2458368,
+  "coverage": "Every rows 1..96 and N 1..32; per-row scales, half boundaries, zero rows, mask words, odd-row compare tail, int/half storage and GM packing",
+  "limitations": "CPU layout/correctness model; original near-half functions unchanged. Hardware compiler, DMA behavior, sync and timings still require platform regression."
+}

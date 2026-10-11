@@ -1,0 +1,7 @@
+{
+  "random_quantization_values": 400000,
+  "near_half_values": 75000,
+  "matrix_shapes": 110,
+  "status": "PASS",
+  "limitation": "CPU integer-threshold arithmetic validation; NPU compiler, launch, and scalar multiplication order require platform validation."
+}

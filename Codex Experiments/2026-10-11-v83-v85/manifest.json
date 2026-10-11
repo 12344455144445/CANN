@@ -1,0 +1,20 @@
+{
+  "base": "v82 / platform submission724207 / 15/15",
+  "base_sha256": "849358aa5267ea24b600d6cb458db72abb2e282d6495ecd7b92de618ef062e37",
+  "device_validation": "PENDING",
+  "note": "CPU proofs and source scopes do not establish ASC compilation, synchronization or score.",
+  "versions": {
+    "v83": {
+      "bytes": 85799,
+      "sha256": "4bfafac56b8773d1dcd334cacf157d1eaea1f629592053a6f370972ac70c0889"
+    },
+    "v84": {
+      "bytes": 85260,
+      "sha256": "b17cf7e9e7da2dca60ffbefd35851c769dadaa1e53c764d301dc608265b07ebc"
+    },
+    "v85": {
+      "bytes": 87060,
+      "sha256": "ac239a854efe2c55b7f6a9ea6179f76fd22755641827a4a9dd8ee77631007934"
+    }
+  }
+}
