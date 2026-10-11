@@ -1,0 +1,2018 @@
+{
+  "date": "2026-10-11",
+  "completed_evaluations": 13,
+  "all_evaluations_15_pass_zero_error": true,
+  "common_reference_us": [
+    2.15,
+    1.67,
+    2.5,
+    8.26,
+    8.54,
+    12.38,
+    15.37,
+    15.8,
+    19.27,
+    36.27,
+    54.79,
+    72.73,
+    84.11,
+    174.06,
+    342.55
+  ],
+  "records": [
+    {
+      "version": "v76_control_20261011",
+      "label": "v76控制",
+      "source_sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.54,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.4,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.45,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.04,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.68,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 35.2,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 49.08,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 117.19,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 59.5,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 120.26,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 232.09,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 293.75,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 390.44,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 765.98,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1610.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.54,
+        5.4,
+        8.45,
+        20.04,
+        20.68,
+        35.2,
+        49.08,
+        117.19,
+        59.5,
+        120.26,
+        232.09,
+        293.75,
+        390.44,
+        765.98,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.32260830407026,
+      "subsequent_team_score_observation": 24.32,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "昨日推荐源码，今日控制对照",
+      "judgment": "统一参考基线"
+    },
+    {
+      "version": "v76_control_20261011_repeat",
+      "label": "v76控制复测",
+      "source_sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.5,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.72,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.28,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.4,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.95,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 34.32,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 48.3,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 115.89,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.17,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.34,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 229.78,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 292.83,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 388.7,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 773.48,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1620.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.5,
+        4.72,
+        8.28,
+        19.4,
+        19.95,
+        34.32,
+        48.3,
+        115.89,
+        58.17,
+        118.34,
+        229.78,
+        292.83,
+        388.7,
+        773.48,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.722069345723174,
+      "subsequent_team_score_observation": 24.57,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "用户取消复测前已提交；保留结果，之后不再复测原版",
+      "judgment": "同码时序波动；榜单与独立估算不一致，不能唯一归因"
+    },
+    {
+      "version": "v80_web_20261011",
+      "label": "v80",
+      "source_sha256": "0ce0aa1bf30e525918fd8674690dea0c0bb277725eda7bf843ae71de2fef5af5",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.54,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.39,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.38,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.66,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.13,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 34.07,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 47.29,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 115.9,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.15,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.27,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 230.54,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 294.29,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 390.12,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 763.42,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1600.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.54,
+        5.39,
+        8.38,
+        18.66,
+        19.13,
+        34.07,
+        47.29,
+        115.9,
+        58.15,
+        118.27,
+        230.54,
+        294.29,
+        390.12,
+        763.42,
+        1600.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.736101357550698,
+      "subsequent_team_score_observation": 24.73,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "删除第一遍max前的冗余ReLU及相关屏障",
+      "judgment": "优于控制，低于v81"
+    },
+    {
+      "version": "v81_web_20261011",
+      "label": "v81",
+      "source_sha256": "77aee7b78648ec56566df80356d93bb3fb45027c43e474755c930e07e21b6288",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.95,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.67,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.13,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.79,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.39,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 33.74,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 48.24,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 116.74,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.31,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.2,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 231.76,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 294.89,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 390.89,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 782.42,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1620.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        8.95,
+        4.67,
+        8.13,
+        18.79,
+        19.39,
+        33.74,
+        48.24,
+        116.74,
+        58.31,
+        118.2,
+        231.76,
+        294.89,
+        390.89,
+        782.42,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.90199270313305,
+      "subsequent_team_score_observation": 24.9,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "在v80基础上删除tiny全零行的冗余预填充；本轮优化起点",
+      "judgment": "首轮最高，用户选择作为优化起点"
+    },
+    {
+      "version": "v82_web_20261011",
+      "label": "v82",
+      "source_sha256": "2bf0e2bb6814637199e778639a889cde6536293e79b8c860a4807b899bace65e",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.66,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.6,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.53,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.85,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.74,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 35.67,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 49.38,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.07,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 59.87,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 119.72,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 232.83,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 295.58,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 392.78,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 765.83,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1620.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.66,
+        5.6,
+        8.53,
+        19.85,
+        20.74,
+        35.67,
+        49.38,
+        118.07,
+        59.87,
+        119.72,
+        232.83,
+        295.58,
+        392.78,
+        765.83,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.23038750546058,
+      "subsequent_team_score_observation": 24.23,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "第三个PR实验候选，整体表现低于v81",
+      "judgment": "不选"
+    },
+    {
+      "version": "v83_tiny_dequant_20261011",
+      "label": "v83",
+      "source_sha256": "7b5448cad3c2348c356f23d14211cbe593191efe504ef31ba49b91da9138975b",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.74,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.92,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 7.76,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.48,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 21.06,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 35.44,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 49.67,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.66,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 60.29,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 120.92,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 230.91,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 296.91,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 394.04,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 766.91,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1630.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        8.74,
+        4.92,
+        7.76,
+        20.48,
+        21.06,
+        35.44,
+        49.67,
+        118.66,
+        60.29,
+        120.92,
+        230.91,
+        296.91,
+        394.04,
+        766.91,
+        1630.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.458089363891418,
+      "subsequent_team_score_observation": 24.46,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "tiny反量化两个标量乘法改为保持顺序的向量乘法",
+      "judgment": "部分tiny点更快，但整体未改善"
+    },
+    {
+      "version": "v84_n32_batch4_20261011",
+      "label": "v84",
+      "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.21,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.63,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 7.96,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.77,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.99,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 33.37,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 47.05,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 116.49,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 57.73,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 119.11,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 230.4,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 295.5,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 391.83,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 777.06,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1610.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.21,
+        4.63,
+        7.96,
+        18.77,
+        18.99,
+        33.37,
+        47.05,
+        116.49,
+        57.73,
+        119.11,
+        230.4,
+        295.5,
+        391.83,
+        777.06,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 25.01296730411219,
+      "subsequent_team_score_observation": 25.01,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "N=32加入已有最多四行合批；唯一代码改动是门控64→32",
+      "judgment": "本轮最高观测，推荐；未复测，不宣称稳定收益"
+    },
+    {
+      "version": "v85_batch16_20261011",
+      "label": "v85",
+      "source_sha256": "395c2594150f074a544d1a98b2dba061a9f82b7da529f93c78ed846826858d88",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.68,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.44,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 7.96,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.18,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.0,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 34.61,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 48.21,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 117.84,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.85,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 120.08,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 233.34,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 296.39,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 393.71,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 776.78,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1620.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        8.68,
+        5.44,
+        7.96,
+        19.18,
+        20.0,
+        34.61,
+        48.21,
+        117.84,
+        58.85,
+        120.08,
+        233.34,
+        296.39,
+        393.71,
+        776.78,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.60348619009255,
+      "subsequent_team_score_observation": 24.6,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "在容量允许时合批上限4→16，并扩大每行规约结果槽",
+      "judgment": "扩大批次未改善，弃用"
+    },
+    {
+      "version": "v86_n8_batch4_20261011",
+      "label": "v86",
+      "source_sha256": "9df4c5a1d3ab13d5b297c9c5b7351c067c96d548cdc98999e479300f62562073",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.35,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.7,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.09,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.75,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.16,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 33.95,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 47.23,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 115.01,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.44,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 119.43,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 229.9,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 293.8,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 391.04,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 771.1,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1610.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.35,
+        4.7,
+        8.09,
+        18.75,
+        19.16,
+        33.95,
+        47.23,
+        115.01,
+        58.44,
+        119.43,
+        229.9,
+        293.8,
+        391.04,
+        771.1,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.923622424239415,
+      "subsequent_team_score_observation": 24.92,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "四行合批门控从N%32扩展到N%8",
+      "judgment": "接近起点，仍低于v84"
+    },
+    {
+      "version": "v87_reuse_capacity8192_20261011",
+      "label": "v87",
+      "source_sha256": "66eda90654f4c7fa4e2694a0b939719a452f7e2e2a9b8e24c1ffbc40554b4e27",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.87,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.36,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.13,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.84,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 21.11,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 35.09,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 49.38,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 126.28,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 61.24,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 122.24,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 231.85,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 291.25,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 400.62,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 783.27,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1620.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        8.87,
+        5.36,
+        8.13,
+        19.84,
+        21.11,
+        35.09,
+        49.38,
+        126.28,
+        61.24,
+        122.24,
+        231.85,
+        291.25,
+        400.62,
+        783.27,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.294403442707377,
+      "subsequent_team_score_observation": 24.29,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "复用临时区、缩小规约scratch，合批容量6144→8192",
+      "judgment": "整体退化，弃用"
+    },
+    {
+      "version": "v88_float_floor_20261011",
+      "label": "v88",
+      "source_sha256": "4268688092753d3742d8508f6c7d8b52b2e2c059cf9eccfe9248bd076552eab5",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.3,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 4.63,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 7.84,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.46,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.94,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 34.36,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 48.07,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 115.53,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 58.84,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 117.42,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 228.39,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 289.85,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 386.06,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 760.36,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1590.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.3,
+        4.63,
+        7.84,
+        19.46,
+        19.94,
+        34.36,
+        48.07,
+        115.53,
+        58.84,
+        117.42,
+        228.39,
+        289.85,
+        386.06,
+        760.36,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.863576933437297,
+      "subsequent_team_score_observation": 24.86,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "通用半整数筛选用FP32直接FLOOR，替代两次类型转换",
+      "judgment": "长点改善，总分未超过v84"
+    },
+    {
+      "version": "v89_all_float_floor_20261011",
+      "label": "v89",
+      "source_sha256": "86d9a5326874b31517963f835a1dad9416310fd020c282f0306e231dd965ea45",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 9.33,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 6.24,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.06,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 20.6,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 21.05,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 35.07,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 48.73,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 116.67,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 59.55,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 119.01,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 229.98,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 291.21,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 388.5,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 751.34,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1590.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        9.33,
+        6.24,
+        8.06,
+        20.6,
+        21.05,
+        35.07,
+        48.73,
+        116.67,
+        59.55,
+        119.01,
+        229.98,
+        291.21,
+        388.5,
+        751.34,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.240412721934977,
+      "subsequent_team_score_observation": 24.24,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "把v88的FP32 FLOOR捷径扩展到tiny路径",
+      "judgment": "第二点明显退化，弃用"
+    },
+    {
+      "version": "v90_npartition_20261011",
+      "label": "v90",
+      "source_sha256": "3002a0ad11c2d80a4ada2bd0a1b8ebd2b9ca307c436ab340f016596164ace7c9",
+      "status": "Pass",
+      "all_pass": true,
+      "points": [
+        {
+          "point": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.96,
+          "reference_us": 2.15
+        },
+        {
+          "point": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 5.3,
+          "reference_us": 1.67
+        },
+        {
+          "point": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 8.1,
+          "reference_us": 2.5
+        },
+        {
+          "point": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 18.7,
+          "reference_us": 8.26
+        },
+        {
+          "point": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 19.24,
+          "reference_us": 8.54
+        },
+        {
+          "point": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 33.72,
+          "reference_us": 12.38
+        },
+        {
+          "point": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 47.97,
+          "reference_us": 15.37
+        },
+        {
+          "point": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 116.43,
+          "reference_us": 15.8
+        },
+        {
+          "point": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 57.81,
+          "reference_us": 19.27
+        },
+        {
+          "point": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 118.51,
+          "reference_us": 36.27
+        },
+        {
+          "point": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 232.36,
+          "reference_us": 54.79
+        },
+        {
+          "point": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 294.99,
+          "reference_us": 72.73
+        },
+        {
+          "point": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 393.27,
+          "reference_us": 84.11
+        },
+        {
+          "point": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 783.68,
+          "reference_us": 174.06
+        },
+        {
+          "point": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "time_us": 1630.0,
+          "reference_us": 342.55
+        }
+      ],
+      "times_us": [
+        8.96,
+        5.3,
+        8.1,
+        18.7,
+        19.24,
+        33.72,
+        47.97,
+        116.43,
+        57.81,
+        118.51,
+        232.36,
+        294.99,
+        393.27,
+        783.68,
+        1630.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.5,
+        8.26,
+        8.54,
+        12.38,
+        15.37,
+        15.8,
+        19.27,
+        36.27,
+        54.79,
+        72.73,
+        84.11,
+        174.06,
+        342.55
+      ],
+      "estimated_score_common_T": 24.778543216809076,
+      "subsequent_team_score_observation": 24.78,
+      "score_observation_limitation": "队伍并发提交，观测值不能唯一归因于本版本；统一参考分数由网页四舍五入耗时估算",
+      "change": "Cube按M/N分配；同一stream先完成矩阵乘，再执行原Vector后处理",
+      "judgment": "全部通过，但未超v84；隐藏点是否命中新分支不能直接观测"
+    }
+  ],
+  "score_formula": "15点等权平均；t<=T时100，否则100/(1+log_base_1.5(t/T))",
+  "limitation": "耗时已四舍五入，分数是估算。队伍实时分数受并发提交和参考变化影响。无真机profiler。",
+  "competition_submissions_stopped_by_user": true,
+  "recommended_version": "v84_n32_batch4_20261011",
+  "last_platform_version": "v90_npartition_20261011"
+}

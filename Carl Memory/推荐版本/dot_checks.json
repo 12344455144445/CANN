@@ -1,8 +1,15 @@
 {
-  "status": "PASS",
-  "dot_layout_and_numeric_cases": 4772,
-  "max_padded_B_or_product_elements": 1984,
-  "coverage": "Every gated N,K pair; random and extremal -128 inputs, K crossing 32/64/96/128, zero rows",
-  "proof": "Each int8 and half input exact in fp32; integer products and partial sums bounded by 2097152 and exact in any reduction tree",
-  "limitation": "CPU layout and arithmetic proof. ASC overloads, DMA synchronization, compiler resources and hardware performance require platform validation."
+  "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+  "evidence_kind": "Inherited arithmetic proof and prior CPU checks; not rerun for v84",
+  "prior_version": "v76_tiny_batch_quant",
+  "prior_CPU_evidence": {
+    "status": "PASS",
+    "dot_layout_and_numeric_cases": 4772,
+    "max_padded_B_or_product_elements": 1984,
+    "coverage": "Every gated N,K pair; random and extremal -128 inputs, K crossing 32/64/96/128, zero rows",
+    "proof": "Each int8 and half input exact in fp32; integer products and partial sums bounded by 2097152 and exact in any reduction tree",
+    "limitation": "CPU layout and arithmetic proof. ASC overloads, DMA synchronization, compiler resources and hardware performance require platform validation."
+  },
+  "v84_review": "v84 tiny_direct code is identical to v81. This sidecar does not claim all v76 source is identical to v84.",
+  "current_platform_scope": "Current v84 passed supplied 15 platform cases; no extra custom NPU cases"
 }

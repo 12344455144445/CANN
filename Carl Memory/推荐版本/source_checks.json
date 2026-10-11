@@ -1,8 +1,12 @@
 {
-  "sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
-  "inverse_diff_exact": true,
-  "changed_function": "QmqTryTinyDirect only",
-  "dot_dequantization_scale_unchanged": true,
-  "row_storage_stride": 32,
-  "quantization": "Same vector precision pipeline as v75, across all rows with per-row divisors and correction scales"
+  "version": "v84_n32_batch4_20261011",
+  "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+  "base_version": "v81_web_20261011",
+  "base_source_sha256": "77aee7b78648ec56566df80356d93bb3fb45027c43e474755c930e07e21b6288",
+  "only_live_change": "rowBatchLimit gate N>=64 to N>=32; N=32 newly uses existing four-row path",
+  "all_other_source_identical": true,
+  "precision_functions_identical": true,
+  "cube_flags_host_tiling_identical": true,
+  "UB_allocations_identical": true,
+  "recommendation_copy_byte_identical": true
 }

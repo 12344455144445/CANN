@@ -1,7 +1,8 @@
 {
+  "version": "v84_n32_batch4_20261011",
+  "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
   "status": "PASS",
-  "row_N_batch_configurations": 3072,
-  "true_output_values": 2458368,
-  "coverage": "Every rows 1..96 and N 1..32; per-row scales, half boundaries, zero rows, mask words, odd-row compare tail, int/half storage and GM packing",
-  "limitations": "CPU layout/correctness model; original near-half functions unchanged. Hardware compiler, DMA behavior, sync and timings still require platform regression."
+  "queue_and_tail_configurations": 1024,
+  "independent_batched_arithmetic_elements": 112576,
+  "scope": "N=32新增四行合批门控；每行尺度独立、尾行与队列覆盖。CPU检查不是设备profile。"
 }

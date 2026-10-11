@@ -1,12 +1,120 @@
 {
-  "source_sha256": "4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7",
-  "tested_versions": [
-    "v76_tiny_batch_quant",
-    "v78_batch_repeat"
-  ],
-  "device_compilation": "PASS",
-  "test_points_passed_each_run": 15,
+  "version": "v84_n32_batch4_20261011",
+  "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+  "device_compilation_and_execution": "PASS",
+  "test_points_passed": 15,
   "error_percent_all_points": 0.0,
-  "scope": "设备提供的15个测试点，非所有可能输入。",
-  "pre_submit_review": "review_checks.json保留提交前状态，本文件为后续设备验证摘要。"
+  "points": [
+    {
+      "point": 1,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 9.21,
+      "reference_us": 2.15
+    },
+    {
+      "point": 2,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 4.63,
+      "reference_us": 1.67
+    },
+    {
+      "point": 3,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 7.96,
+      "reference_us": 2.5
+    },
+    {
+      "point": 4,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 18.77,
+      "reference_us": 8.26
+    },
+    {
+      "point": 5,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 18.99,
+      "reference_us": 8.54
+    },
+    {
+      "point": 6,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 33.37,
+      "reference_us": 12.38
+    },
+    {
+      "point": 7,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 47.05,
+      "reference_us": 15.37
+    },
+    {
+      "point": 8,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 116.49,
+      "reference_us": 15.8
+    },
+    {
+      "point": 9,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 57.73,
+      "reference_us": 19.27
+    },
+    {
+      "point": 10,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 119.11,
+      "reference_us": 36.27
+    },
+    {
+      "point": 11,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 230.4,
+      "reference_us": 54.79
+    },
+    {
+      "point": 12,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 295.5,
+      "reference_us": 72.73
+    },
+    {
+      "point": 13,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 391.83,
+      "reference_us": 84.11
+    },
+    {
+      "point": 14,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 777.06,
+      "reference_us": 174.06
+    },
+    {
+      "point": 15,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 1610.0,
+      "reference_us": 342.55
+    }
+  ],
+  "estimated_score_common_T": 25.01296730411219,
+  "subsequent_team_score_observation": 25.01,
+  "scope": "比赛提供的15点；单次结果，无profiler或自定义真机输入；队友并发，榜单不能唯一归因。",
+  "pre_submit_review": "review_checks保留NOT RUN历史，本文件为随后设备验证证据",
+  "last_platform_version_is_recommendation": false,
+  "last_platform_version": "v90_npartition_20261011"
 }
