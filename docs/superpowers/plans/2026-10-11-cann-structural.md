@@ -17,11 +17,11 @@ Spec: ../../../Carl Memory/2026-10-10_工作总结.md and the submitted v82 sour
 
 ## Tasks
 
-- [ ] Write source/DMA/row-coverage and CPU numerical checks; run against absent candidate artifacts to establish missing implementation.
-- [ ] Generate v83: only for64<=N<=3072 and N%32!=0, pad float rows to32 elements, clear skipped UB gaps, use strided multiblock GM->UB and tightly packed UB->GM. Preserve existing aligned path.
-- [ ] Generate v84 independently: validated tiny shapes launch directly with a bounded host row planner before Cube tiling. Retain result workspace for the device fallback and stream synchronization.
-- [ ] Generate v85 as composition. Prove transformations invert exactly and unchanged scopes match baseline.
-- [ ] Exercise adversarial layout/numerical CPU cases, resource and row coverage checks; independent review; repair findings once and rerun.
-- [ ] Deliver versioned files, hashes, clipboard tools, reading map, test order and failure criteria.
+- [x] Write source/DMA/row-coverage and CPU numerical checks; run against absent candidate artifacts to establish missing implementation.
+- [x] Generate v83: only for64<=N<=3072 and N%32!=0, pad float rows to32 elements, clear skipped UB gaps, use strided multiblock GM->UB and tightly packed UB->GM. Preserve existing aligned path.
+- [x] Generate v84 independently: validated tiny shapes launch directly with a bounded host row planner before Cube tiling. Retain result workspace for the device fallback and stream synchronization.
+- [x] Generate v85 as composition. Prove transformations invert exactly and unchanged scopes match baseline.
+- [x] Exercise adversarial layout/numerical CPU cases, resource and row coverage checks; independent review; repair findings once and rerun.
+- [x] Deliver versioned files, hashes, clipboard tools, reading map, test order and failure criteria.
 
 Ruling: user explicitly requested autonomous implementation, so proceed without a plan approval pause. Use a new linked worktree to preserve the verified sources. Retain artifacts and tests for teammate continuation instead of deleting them after review. Main remains the platform baseline until controlled device evaluation chooses a winner.
