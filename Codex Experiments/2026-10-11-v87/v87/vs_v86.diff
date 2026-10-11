@@ -1,0 +1,147 @@
+--- v86
++++ v87
+@@ -1,3 +1,4 @@
++// V87: V86 tiny path plus reviewed padded general-row batching; NPU validation pending.
+ // V86: tiny vector postprocessing candidate from V84; device validation pending.
+ // STRUCTURAL V84 CANDIDATE: device evaluation pending.
+ // EXPERIMENT V82 (UNTESTED): v81 plus skip tiny buffer zeroing when N is 32. Baseline: Carl Memory v76 SHA-256 4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7.
+@@ -704,13 +705,29 @@
+     GlobalTensor<int32_t>& workspace,
+     uint64_t offset,
+     uint32_t count,
+-    uint32_t alignedCount)
++    uint32_t alignedCount,
++    uint32_t paddedRows = 1U,
++    uint32_t rowStride = 0U)
+ {
+     LocalTensor<int32_t> input = queue.AllocTensor<int32_t>();
+-    DataCopyExtParams copy{1, static_cast<uint32_t>(count * sizeof(int32_t)), 0, 0, 0};
+-    DataCopyPadExtParams<int32_t> pad{
+-        true, 0, static_cast<uint8_t>(alignedCount - count), 0};
+-    DataCopyPad(input, workspace[offset], copy, pad);
++    if (rowStride != 0U) {
++        // DMA pads only to 8 int32 elements. Initialize the additional row gap.
++        Duplicate(input, static_cast<int32_t>(0), alignedCount);
++        PipeBarrier<PIPE_ALL>();
++        const uint32_t rowN = count / paddedRows;
++        const uint32_t naturalStride = QmqAlignUp(rowN, kFloatBlock);
++        DataCopyExtParams copy{static_cast<uint16_t>(paddedRows),
++            static_cast<uint32_t>(rowN * sizeof(int32_t)), 0,
++            (rowStride - naturalStride) / kFloatBlock, 0};
++        DataCopyPadExtParams<int32_t> pad{
++            true, 0, static_cast<uint8_t>(naturalStride - rowN), 0};
++        DataCopyPad(input, workspace[offset], copy, pad);
++    } else {
++        DataCopyExtParams copy{1, static_cast<uint32_t>(count * sizeof(int32_t)), 0, 0, 0};
++        DataCopyPadExtParams<int32_t> pad{
++            true, 0, static_cast<uint8_t>(alignedCount - count), 0};
++        DataCopyPad(input, workspace[offset], copy, pad);
++    }
+     queue.EnQue(input);
+ }
+ 
+@@ -741,8 +758,10 @@
+     // 且两处预取循环都需要在各自的 tile 循环内访问它。
+     constexpr uint32_t kPairPrefetchSpan = 64U;
+     constexpr uint32_t kPairCapacity = 6144;
+-    const uint32_t rowBatchLimit = (n >= 64U && n <= 3072U && n % 32U == 0U)
+-        ? QmqMinValue(4U, kPairCapacity / n) : 1U;
++    const bool paddedBatch = n >= 64U && n <= 3072U && n % 32U != 0U;
++    const uint32_t batchRowStride = paddedBatch ? QmqAlignUp(n, 32U) : n;
++    const uint32_t rowBatchLimit = (n >= 64U && n <= 3072U)
++        ? QmqMinValue(4U, kPairCapacity / batchRowStride) : 1U;
+ 
+     GlobalTensor<int32_t> workspaceGm;
+     GlobalTensor<float> x1ScaleGm;
+@@ -799,13 +818,18 @@
+ 
+     for (uint32_t nOffset = 0; nOffset < n; nOffset += kVectorTileN) {
+         const uint32_t currentN = QmqMinValue(kVectorTileN, n - nOffset);
+-        const uint32_t alignedN = QmqAlignUp(currentN, kFloatBlock);
++        const uint32_t alignedN = paddedBatch ? QmqAlignUp(currentN, 32U)
++            : QmqAlignUp(currentN, kFloatBlock);
+ 
+         LocalTensor<float> x2ScaleLocal = x2ScaleQueue.AllocTensor<float>();
+         DataCopyExtParams x2ScaleCopy{
+             1, static_cast<uint32_t>(currentN * sizeof(float)), 0, 0, 0};
+         DataCopyPadExtParams<float> x2ScalePad{
+-            true, 0, static_cast<uint8_t>(alignedN - currentN), 0.0f};
++            true, 0, static_cast<uint8_t>(QmqAlignUp(currentN, kFloatBlock) - currentN), 0.0f};
++        if (paddedBatch) {
++            Duplicate(x2ScaleLocal, 0.0f, alignedN);
++            PipeBarrier<PIPE_ALL>();
++        }
+         DataCopyPad(x2ScaleLocal, x2ScaleGm[nOffset], x2ScaleCopy, x2ScalePad);
+         x2ScaleQueue.EnQue(x2ScaleLocal);
+         x2ScaleLocal = x2ScaleQueue.DeQue<float>();
+@@ -813,7 +837,8 @@
+         float pairX1Prefetch[kPairPrefetchSpan];
+         QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+             static_cast<uint64_t>(rowStart) * n + nOffset,
+-            currentN * QmqMinValue(rowBatchLimit, rows), alignedN * QmqMinValue(rowBatchLimit, rows));
++            currentN * QmqMinValue(rowBatchLimit, rows), alignedN * QmqMinValue(rowBatchLimit, rows),
++            QmqMinValue(rowBatchLimit, rows), paddedBatch ? alignedN : 0U);
+         for (uint32_t group = 0; group < rows; group += kPairPrefetchSpan) {
+             const uint32_t groupRows = QmqMinValue(kPairPrefetchSpan, rows - group);
+             for (uint32_t i = 0; i < groupRows; ++i) {
+@@ -828,7 +853,7 @@
+                     const uint32_t nextRows = QmqMinValue(rowBatchLimit, rows - globalRow - pairRows);
+                     QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+                         static_cast<uint64_t>(rowStart + globalRow + pairRows) * n + nOffset,
+-                        currentN * nextRows, alignedN * nextRows);
++                        currentN * nextRows, alignedN * nextRows, nextRows, paddedBatch ? alignedN : 0U);
+                 }
+                 LocalTensor<float> fp32Local = fp32Buffer.Get<float>();
+                 LocalTensor<float> scalarMaxLocal = scalarMaxBuffer.Get<float>();
+@@ -900,21 +925,27 @@
+ 
+     for (uint32_t nOffset = 0; nOffset < n; nOffset += kVectorTileN) {
+         const uint32_t currentN = QmqMinValue(kVectorTileN, n - nOffset);
+-        const uint32_t alignedN = QmqAlignUp(currentN, kFloatBlock);
++        const uint32_t alignedN = paddedBatch ? QmqAlignUp(currentN, 32U)
++            : QmqAlignUp(currentN, kFloatBlock);
+         const uint32_t compareCount = QmqAlignUp(currentN, 64U);
+ 
+         LocalTensor<float> x2ScaleLocal = x2ScaleQueue.AllocTensor<float>();
+         DataCopyExtParams x2ScaleCopy{
+             1, static_cast<uint32_t>(currentN * sizeof(float)), 0, 0, 0};
+         DataCopyPadExtParams<float> x2ScalePad{
+-            true, 0, static_cast<uint8_t>(alignedN - currentN), 0.0f};
++            true, 0, static_cast<uint8_t>(QmqAlignUp(currentN, kFloatBlock) - currentN), 0.0f};
++        if (paddedBatch) {
++            Duplicate(x2ScaleLocal, 0.0f, alignedN);
++            PipeBarrier<PIPE_ALL>();
++        }
+         DataCopyPad(x2ScaleLocal, x2ScaleGm[nOffset], x2ScaleCopy, x2ScalePad);
+         x2ScaleQueue.EnQue(x2ScaleLocal);
+         x2ScaleLocal = x2ScaleQueue.DeQue<float>();
+ 
+         QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+             static_cast<uint64_t>(rowStart) * n + nOffset,
+-            currentN * QmqMinValue(rowBatchLimit, rows), alignedN * QmqMinValue(rowBatchLimit, rows));
++            currentN * QmqMinValue(rowBatchLimit, rows), alignedN * QmqMinValue(rowBatchLimit, rows),
++            QmqMinValue(rowBatchLimit, rows), paddedBatch ? alignedN : 0U);
+         float pairX1Prefetch2[kPairPrefetchSpan];
+         float pairRowScalePrefetch[kPairPrefetchSpan];
+         for (uint32_t group = 0; group < rows; group += kPairPrefetchSpan) {
+@@ -934,7 +965,7 @@
+                     const uint32_t nextRows = QmqMinValue(rowBatchLimit, rows - globalRow - pairRows);
+                     QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+                         static_cast<uint64_t>(rowStart + globalRow + pairRows) * n + nOffset,
+-                        currentN * nextRows, alignedN * nextRows);
++                        currentN * nextRows, alignedN * nextRows, nextRows, paddedBatch ? alignedN : 0U);
+                 }
+                 LocalTensor<float> fp32Local = fp32Buffer.Get<float>();
+                 Cast(fp32Local, inputLocal, RoundMode::CAST_RINT, pairCount);
+@@ -1021,7 +1052,10 @@
+                 Cast(outputLocal, halfLocal, RoundMode::CAST_RINT, pairCount);
+                 outputQueue.EnQue(outputLocal);
+                 outputLocal = outputQueue.DeQue<int8_t>();
+-                DataCopyExtParams outputCopy{1, currentN * pairRows, 0, 0, 0};
++                // Each padded INT8 row has a 32-byte-aligned UB stride; GM rows stay compact.
++                DataCopyExtParams outputCopy{
++                    static_cast<uint16_t>(paddedBatch ? pairRows : 1U),
++                    paddedBatch ? currentN : currentN * pairRows, 0, 0, 0};
+                 DataCopyPad(yGm[offset], outputLocal, outputCopy);
+                 outputQueue.FreeTensor(outputLocal);
+                 workspaceQueue.FreeTensor(inputLocal);
