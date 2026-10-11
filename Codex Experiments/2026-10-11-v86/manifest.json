@@ -1,0 +1,9 @@
+{
+  "base_version": "v84",
+  "base_sha256": "b17cf7e9e7da2dca60ffbefd35851c769dadaa1e53c764d301dc608265b07ebc",
+  "source_sha256": "13327d9537cb8b9f56c55db813b3b59793ab3d5eb5d406fcf77f27e94e0c347b",
+  "bytes": 86911,
+  "npu_status": "PENDING",
+  "gate": "tiny; N>=16; all scales zero or magnitude in [2^-60,2^40]",
+  "fallback": "Original V84 scalar postprocessing for N<16 or out-of-range scales."
+}

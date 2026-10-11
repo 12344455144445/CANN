@@ -1,0 +1,91 @@
+--- v84
++++ v86
+@@ -1,3 +1,4 @@
++// V86: tiny vector postprocessing candidate from V84; device validation pending.
+ // STRUCTURAL V84 CANDIDATE: device evaluation pending.
+ // EXPERIMENT V82 (UNTESTED): v81 plus skip tiny buffer zeroing when N is 32. Baseline: Carl Memory v76 SHA-256 4bc693a338ae478445fb7aed2d95cae30c3d6bf33fe7fcf5b5a27d4048fdb0d7.
+ // QuantMatmulReluQuant v63: one shared vector path, 1/2-row batches, original 6144 buffers.
+@@ -1205,6 +1206,17 @@
+     const float exactHalf = static_cast<float>(static_cast<int32_t>(lower)) + 0.5f;
+     const int32_t rounded = QmqQuantizeNearHalf(activation, scale, exactHalf);
+     return rounded > 127 ? 127 : rounded;
++}
++
++// Bounded finite scales keep each nonzero scaled integer normal and finite.
++// INT8 dot magnitude <= 2^21; scales are zero or in [2^-60, 2^40].
++// The two separate FP32 multiplies therefore stay in [2^-120, 2^101].
++__aicore__ inline bool QmqTinyVectorScaleSafe(float value)
++{
++    union { float value; uint32_t bits; } word;
++    word.value = value;
++    const uint32_t absolute = word.bits & 0x7fffffffU;
++    return absolute == 0U || (absolute >= 0x21800000U && absolute <= 0x53800000U);
+ }
+ 
+ // Integer dot products fit int32 and fp32 exactly because K<=128.
+@@ -1291,7 +1303,11 @@
+     const uint8_t rowRepStride=static_cast<uint8_t>(kStride/8U);
+     const BinaryRepeatParams dotParams{1,1,1,rowRepStride,0,rowRepStride};
+     float s2Values[32];
+-    for(uint32_t j=0;j<n;++j){s2Values[j]=s2Local.GetValue(j);}
++    bool vectorS2Safe = true;
++    for(uint32_t j=0;j<n;++j){
++        s2Values[j]=s2Local.GetValue(j);
++        vectorS2Safe = vectorS2Safe && QmqTinyVectorScaleSafe(s2Values[j]);
++    }
+     for(uint32_t r=0;r<rows;++r){
+         float activations[32];
+         Mul(products,aFloat[r*kStride],bFloat,static_cast<uint64_t>(firstK),
+@@ -1312,20 +1328,42 @@
+         PipeBarrier<PIPE_ALL>();
+         const float s1=s1Local.GetValue(r);
+         float maximum=0.0f;
+-        for(uint32_t j=0;j<n;++j){
+-            volatile float firstScaled=sums.GetValue(j)*s1;
+-            const float dequantized=firstScaled*s2Values[j];
+-            union { float value; uint32_t bits; } check;
+-            check.value=dequantized;
+-            if((check.bits&0x7f800000U)==0x7f800000U){return false;}
+-            activations[j]=dequantized>0.0f?dequantized:0.0f;
+-            if(activations[j]>maximum){maximum=activations[j];}
++        const bool vectorPost = n >= 16U && vectorS2Safe && QmqTinyVectorScaleSafe(s1);
++        if (vectorPost) {
++            Muls(sums, sums, s1, n);
++            PipeBarrier<PIPE_V>();
++            Mul(sums, sums, s2Local, n);
++            PipeBarrier<PIPE_V>();
++            Maxs(sums, sums, 0.0f, n);
++            PipeBarrier<PIPE_V>();
++            WholeReduceMax(sums[alignedN], sums, static_cast<int32_t>(n),
++                1, 1, 1, 8, ReduceOrder::ORDER_ONLY_VALUE);
++            PipeBarrier<PIPE_ALL>();
++            maximum = sums.GetValue(alignedN);
++            for (uint32_t j = n; j < alignedN; ++j) {
++                sums.SetValue(j, 0.0f);
++            }
++            PipeBarrier<PIPE_ALL>();
++            DataCopy(activationLocal[r*activationStride], sums, alignedN);
++            PipeBarrier<PIPE_V>();
++        } else {
++            for(uint32_t j=0;j<n;++j){
++                volatile float firstScaled=sums.GetValue(j)*s1;
++                const float dequantized=firstScaled*s2Values[j];
++                union { float value; uint32_t bits; } check;
++                check.value=dequantized;
++                if((check.bits&0x7f800000U)==0x7f800000U){return false;}
++                activations[j]=dequantized>0.0f?dequantized:0.0f;
++                if(activations[j]>maximum){maximum=activations[j];}
++            }
+         }
+         const float rowScale=maximum>0.0f?QmqScaleBy127Exact(maximum):1.0f;
+         if(!(rowScale>0.0f)){return false;}
+         ysLocal.SetValue(r,rowScale);
+-        for(uint32_t j=0;j<n;++j){
+-            activationLocal.SetValue(r*activationStride+j,activations[j]);
++        if (!vectorPost) {
++            for(uint32_t j=0;j<n;++j){
++                activationLocal.SetValue(r*activationStride+j,activations[j]);
++            }
+         }
+     }
+     PipeBarrier<PIPE_ALL>();
