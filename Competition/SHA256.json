@@ -1,0 +1,146 @@
+{
+  "algorithm": "SHA256",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 854,
+      "sha256": "ee6cd710a75672edf20a6b3973dda2fc3d1a1f5d8a1f4087232d8ca7d6b767b0"
+    },
+    {
+      "path": "baseline/hardware_validation.json",
+      "bytes": 2479,
+      "sha256": "bffc257dec77097abb74810a1d6ead71145109c91f4727bafcc67af4ed1e4a58"
+    },
+    {
+      "path": "baseline/kernel.asc",
+      "bytes": 82025,
+      "sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107"
+    },
+    {
+      "path": "CANN_学习指南_优化备忘录.md",
+      "bytes": 14950,
+      "sha256": "fb9a1a70875937298f8976d9733d46261463912f5a40370cf023601c3e19f338"
+    },
+    {
+      "path": "CANN_算子优化方案_可执行版.md",
+      "bytes": 12822,
+      "sha256": "0bff6333fe0a54231bfdb2574354a1ee531365d78ef7b21a0c5c99fec017bd97"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2857,
+      "sha256": "e3118b69a236c2309bfc69a983e40a22f89fa4eeb4dfb0a309f2ce395f4ef6ad"
+    },
+    {
+      "path": "references/cann-samples/LICENSE",
+      "bytes": 5316,
+      "sha256": "76bb87f2aaf57119cbc2ad8cb36dda7158f9acd931bb3b08ccc8a408f1664369"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/matmul_story/docs/matmul_performance.md",
+      "bytes": 20298,
+      "sha256": "d250bfb3a28fceb0d208a82921ad61f2c2cf15766cc6f3ea7c1aca288b8901d6"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/matmul_story/matmul_tutorials/2_block_swat/include/block/block_scheduler_mx_swat.h",
+      "bytes": 4970,
+      "sha256": "24d2c2df8161a6bdb77454aef8b159a204b8fc6408ddc6304a69378cc1602e9a"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/matmul_story/matmul_tutorials/README.md",
+      "bytes": 2582,
+      "sha256": "bd66451805e6ed8a7c3760e491910a247e6e338d69bce9e27c9585b30ea1f9bd"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/matmul_story/README.md",
+      "bytes": 4016,
+      "sha256": "c6df3ec8fb31cbcc8a1d991a29aee010b9a58b29dc7e733f1c7ea8ba942f7a98"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/README.md",
+      "bytes": 22741,
+      "sha256": "9b0a3af74531c30f0f46d062ebddd48e89a66ace0d58fa388932b4696089863d"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/1_preload_gamma.asc",
+      "bytes": 18379,
+      "sha256": "9f0f64ab9c1184ef68bec8df580eaad3e7734a1ad0fb0c3fd22ea69a3c87e523"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/4_double_buffer.asc",
+      "bytes": 22974,
+      "sha256": "fd43ea6390b55b842e013147609aae059712f6bd1f08b14c2f241b202951bd84"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/5_ub_utilization.asc",
+      "bytes": 25847,
+      "sha256": "002fe7b5ed349f588c3cd3dab1cd6770ab5e66ef365111f33be49e327b8c484e"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/Story.md",
+      "bytes": 33688,
+      "sha256": "bb1c8cc40d020d41d1cff325d721b12998a2aabc66eaf1140c56e0d837435a54"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/scalar_story/README.md",
+      "bytes": 42317,
+      "sha256": "047365394761278f98a38aee4e0b976518e3812ff16cfe193d3dc5582d7176b1"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/simd_vf_story/broadcast/src/tail_axis_2_distbrc.asc",
+      "bytes": 3796,
+      "sha256": "58a28290a3ac4d04f1d7be86dfb982a81b5a2b96550e9a02bd3d186079f80523"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/simd_vf_story/CMakeLists.txt",
+      "bytes": 3201,
+      "sha256": "5743ed3a34ce515314e3988d893df30a44961ddc7233ed2592716c1bc2c71393"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/simd_vf_story/README.md",
+      "bytes": 65794,
+      "sha256": "a63147f7839157ec178edc812d21895bd52312ad5707ec367e230fe7c5e88b9e"
+    },
+    {
+      "path": "references/cann-samples/Samples/2_Performance/simd_vf_story/reduce/src/reduce_max_ar_unroll.asc",
+      "bytes": 9316,
+      "sha256": "4b7b8b7ff467e9bbe1c8696498781ae43798862f78dceaf06cfd43118ac60c21"
+    },
+    {
+      "path": "references/cann-samples/Third_Party_Open_Source_Software_List.yaml",
+      "bytes": 128,
+      "sha256": "16a9dab1a8a7f2f0b3cdc2040451120ecf62cca5f51486ba54016f16042a5434"
+    },
+    {
+      "path": "references/cann-samples/Third_Party_Open_Source_Software_Notice",
+      "bytes": 46157,
+      "sha256": "918ab7f0a6bbf048d083ff6f7acee5f16506bb9fc6cea3fddfda5a8d3ae5ae31"
+    },
+    {
+      "path": "sources_manifest.json",
+      "bytes": 6222,
+      "sha256": "1755dffb88a2c0d655c159a5093f44a19bdcd9d438c54c289aac4fb8ecc759ec"
+    },
+    {
+      "path": "候选_列尺度复用/kernel.asc",
+      "bytes": 82625,
+      "sha256": "2c592c5571baad502e55d5157d954e8bb1bbc2c6c222e0a0a12a213499320851"
+    },
+    {
+      "path": "候选_列尺度复用/README.md",
+      "bytes": 910,
+      "sha256": "dc16d2da1a4b19d1dce6d484f05fae2594f146be14f3068c159cef78d6b6618d"
+    },
+    {
+      "path": "候选_列尺度复用/review.json",
+      "bytes": 1244,
+      "sha256": "795f65ca550874dce1878f8320f3a040764ff3b33de1d53ddd3b3d40bde878f5"
+    },
+    {
+      "path": "候选_列尺度复用/source.diff",
+      "bytes": 3216,
+      "sha256": "19ebb75885b222985bae7707d55640edc26665f081d2fa489e8d1490117d1322"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "retrieved_beijing": "2026-10-11",
+  "repository": "https://gitcode.com/cann/cann-samples",
+  "commit": "2a8bae704c81ed2ae0a20217cee8a606a2a127a2",
+  "read_scope": "Relevant documentation sections and key implementations; not all repository files",
+  "files": [
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/rms_norm_quant_story/README.md",
+      "sha256": "9b0a3af74531c30f0f46d062ebddd48e89a66ace0d58fa388932b4696089863d",
+      "bytes": 22741,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/README.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/rms_norm_quant_story/Story.md",
+      "sha256": "bb1c8cc40d020d41d1cff325d721b12998a2aabc66eaf1140c56e0d837435a54",
+      "bytes": 33688,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/Story.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/rms_norm_quant_story/src/1_preload_gamma.asc",
+      "sha256": "9f0f64ab9c1184ef68bec8df580eaad3e7734a1ad0fb0c3fd22ea69a3c87e523",
+      "bytes": 18379,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/1_preload_gamma.asc"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/rms_norm_quant_story/src/4_double_buffer.asc",
+      "sha256": "fd43ea6390b55b842e013147609aae059712f6bd1f08b14c2f241b202951bd84",
+      "bytes": 22974,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/4_double_buffer.asc"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/rms_norm_quant_story/src/5_ub_utilization.asc",
+      "sha256": "002fe7b5ed349f588c3cd3dab1cd6770ab5e66ef365111f33be49e327b8c484e",
+      "bytes": 25847,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/rms_norm_quant_story/src/5_ub_utilization.asc"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/simd_vf_story/README.md",
+      "sha256": "a63147f7839157ec178edc812d21895bd52312ad5707ec367e230fe7c5e88b9e",
+      "bytes": 65794,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/simd_vf_story/README.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/simd_vf_story/CMakeLists.txt",
+      "sha256": "5743ed3a34ce515314e3988d893df30a44961ddc7233ed2592716c1bc2c71393",
+      "bytes": 3201,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/simd_vf_story/CMakeLists.txt"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/simd_vf_story/broadcast/src/tail_axis_2_distbrc.asc",
+      "sha256": "58a28290a3ac4d04f1d7be86dfb982a81b5a2b96550e9a02bd3d186079f80523",
+      "bytes": 3796,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/simd_vf_story/broadcast/src/tail_axis_2_distbrc.asc"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/simd_vf_story/reduce/src/reduce_max_ar_unroll.asc",
+      "sha256": "4b7b8b7ff467e9bbe1c8696498781ae43798862f78dceaf06cfd43118ac60c21",
+      "bytes": 9316,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/simd_vf_story/reduce/src/reduce_max_ar_unroll.asc"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/scalar_story/README.md",
+      "sha256": "047365394761278f98a38aee4e0b976518e3812ff16cfe193d3dc5582d7176b1",
+      "bytes": 42317,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/scalar_story/README.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/matmul_story/README.md",
+      "sha256": "c6df3ec8fb31cbcc8a1d991a29aee010b9a58b29dc7e733f1c7ea8ba942f7a98",
+      "bytes": 4016,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/matmul_story/README.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/matmul_story/docs/matmul_performance.md",
+      "sha256": "d250bfb3a28fceb0d208a82921ad61f2c2cf15766cc6f3ea7c1aca288b8901d6",
+      "bytes": 20298,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/matmul_story/docs/matmul_performance.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/matmul_story/matmul_tutorials/README.md",
+      "sha256": "bd66451805e6ed8a7c3760e491910a247e6e338d69bce9e27c9585b30ea1f9bd",
+      "bytes": 2582,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/matmul_story/matmul_tutorials/README.md"
+    },
+    {
+      "source_url": "https://gitcode.com/cann/cann-samples/blob/2a8bae704c81ed2ae0a20217cee8a606a2a127a2/Samples/2_Performance/matmul_story/matmul_tutorials/2_block_swat/include/block/block_scheduler_mx_swat.h",
+      "sha256": "24d2c2df8161a6bdb77454aef8b159a204b8fc6408ddc6304a69378cc1602e9a",
+      "bytes": 4970,
+      "path_from_competition": "references/cann-samples/Samples/2_Performance/matmul_story/matmul_tutorials/2_block_swat/include/block/block_scheduler_mx_swat.h"
+    }
+  ],
+  "snapshot_note": "Selected 14 consulted text files, not a full buildable repository; original files unchanged. Images and other samples are available upstream."
+}

@@ -1,0 +1,73 @@
+--- v84/kernel.asc
++++ column_scale_reuse/kernel.asc
+@@ -795,6 +795,11 @@
+     Duplicate(rowMaxLocal, 0.0f, alignedRows);
+     PipeBarrier<PIPE_V>();
+ 
++    // Cache the existing read-only column-scale tensor across both passes.
++    // N<=3072 guarantees one N tile; no extra UB allocation is needed.
++    const bool reuseColumnScale = n <= 3072U;
++    LocalTensor<float> retainedColumnScale;
++
+     for (uint32_t nOffset = 0; nOffset < n; nOffset += kVectorTileN) {
+         const uint32_t currentN = QmqMinValue(kVectorTileN, n - nOffset);
+         const uint32_t alignedN = QmqAlignUp(currentN, kFloatBlock);
+@@ -807,6 +812,7 @@
+         DataCopyPad(x2ScaleLocal, x2ScaleGm[nOffset], x2ScaleCopy, x2ScalePad);
+         x2ScaleQueue.EnQue(x2ScaleLocal);
+         x2ScaleLocal = x2ScaleQueue.DeQue<float>();
++        if (reuseColumnScale) { retainedColumnScale = x2ScaleLocal; }
+ 
+         float pairX1Prefetch[kPairPrefetchSpan];
+         QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+@@ -857,7 +863,7 @@
+                 workspaceQueue.FreeTensor(inputLocal);
+             }
+         }
+-        x2ScaleQueue.FreeTensor(x2ScaleLocal);
++        if (!reuseColumnScale) { x2ScaleQueue.FreeTensor(x2ScaleLocal); }
+     }
+ 
+     // [OPT-V80] rowMaxLocal 从 0.0f 开始且仅在 tileMax 更大时更新。
+@@ -901,14 +907,19 @@
+         const uint32_t alignedN = QmqAlignUp(currentN, kFloatBlock);
+         const uint32_t compareCount = QmqAlignUp(currentN, 64U);
+ 
+-        LocalTensor<float> x2ScaleLocal = x2ScaleQueue.AllocTensor<float>();
+-        DataCopyExtParams x2ScaleCopy{
+-            1, static_cast<uint32_t>(currentN * sizeof(float)), 0, 0, 0};
+-        DataCopyPadExtParams<float> x2ScalePad{
+-            true, 0, static_cast<uint8_t>(alignedN - currentN), 0.0f};
+-        DataCopyPad(x2ScaleLocal, x2ScaleGm[nOffset], x2ScaleCopy, x2ScalePad);
+-        x2ScaleQueue.EnQue(x2ScaleLocal);
+-        x2ScaleLocal = x2ScaleQueue.DeQue<float>();
++        LocalTensor<float> x2ScaleLocal;
++        if (reuseColumnScale) {
++            x2ScaleLocal = retainedColumnScale;
++        } else {
++            x2ScaleLocal = x2ScaleQueue.AllocTensor<float>();
++            DataCopyExtParams x2ScaleCopy{
++                1, static_cast<uint32_t>(currentN * sizeof(float)), 0, 0, 0};
++            DataCopyPadExtParams<float> x2ScalePad{
++                true, 0, static_cast<uint8_t>(alignedN - currentN), 0.0f};
++            DataCopyPad(x2ScaleLocal, x2ScaleGm[nOffset], x2ScaleCopy, x2ScalePad);
++            x2ScaleQueue.EnQue(x2ScaleLocal);
++            x2ScaleLocal = x2ScaleQueue.DeQue<float>();
++        }
+ 
+         QmqEnqueueWorkspaceTile(workspaceQueue, workspaceGm,
+             static_cast<uint64_t>(rowStart) * n + nOffset,
+@@ -1025,9 +1036,10 @@
+                 workspaceQueue.FreeTensor(inputLocal);
+             }
+         }
+-        x2ScaleQueue.FreeTensor(x2ScaleLocal);
+-    }
+-
++        if (!reuseColumnScale) { x2ScaleQueue.FreeTensor(x2ScaleLocal); }
++    }
++
++    if (reuseColumnScale) { x2ScaleQueue.FreeTensor(retainedColumnScale); }
+     x1ScaleQueue.FreeTensor(x1ScaleLocal);
+     PipeBarrier<PIPE_ALL>();
+ }

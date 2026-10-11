@@ -1,0 +1,115 @@
+{
+  "source_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+  "submission_id": 724452,
+  "url": "https://cannjudge.cn/public/op_challenge_hangxia_prelim/quantmatmulreluquant/submission/6acb268e694b590c3cf2c732",
+  "status": "Pass",
+  "correctness_15_tests": true,
+  "points": [
+    {
+      "point": 1,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 9.21,
+      "reference_us": 2.15
+    },
+    {
+      "point": 2,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 4.63,
+      "reference_us": 1.67
+    },
+    {
+      "point": 3,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 7.96,
+      "reference_us": 2.5
+    },
+    {
+      "point": 4,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 18.77,
+      "reference_us": 8.26
+    },
+    {
+      "point": 5,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 18.99,
+      "reference_us": 8.54
+    },
+    {
+      "point": 6,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 33.37,
+      "reference_us": 12.38
+    },
+    {
+      "point": 7,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 47.05,
+      "reference_us": 15.37
+    },
+    {
+      "point": 8,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 116.49,
+      "reference_us": 15.8
+    },
+    {
+      "point": 9,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 57.73,
+      "reference_us": 19.27
+    },
+    {
+      "point": 10,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 119.11,
+      "reference_us": 36.27
+    },
+    {
+      "point": 11,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 230.4,
+      "reference_us": 54.79
+    },
+    {
+      "point": 12,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 295.5,
+      "reference_us": 72.73
+    },
+    {
+      "point": 13,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 391.83,
+      "reference_us": 84.11
+    },
+    {
+      "point": 14,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 777.06,
+      "reference_us": 174.06
+    },
+    {
+      "point": 15,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "time_us": 1610.0,
+      "reference_us": 342.55
+    }
+  ],
+  "scope": "Platform supplied 15 cases only; no custom-device tests or profiler run"
+}

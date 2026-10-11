@@ -1,0 +1,30 @@
+{
+  "candidate": "qmq_column_scale_reuse",
+  "baseline": "v84_n32_batch4_20261011",
+  "baseline_sha256": "b45baa5babfce9522491e50709ea62908728208fb38aff44eb1aeb1a77317107",
+  "candidate_sha256": "2c592c5571baad502e55d5157d954e8bb1bbc2c6c222e0a0a12a213499320851",
+  "official_repository_commit": "2a8bae704c81ed2ae0a20217cee8a606a2a127a2",
+  "method_source": "rms_norm_quant_story/Story.md Step 1: preload shared read-only data",
+  "gate": "0 < N <= 3072; existing vector path only",
+  "preconditions": [
+    "Input scales remain read-only during the kernel",
+    "Input scales do not overlap output storage"
+  ],
+  "saved_gm_read_bytes_per_vector_invocation": "4*N under the gate",
+  "new_ub_bytes": 0,
+  "structural_review": {
+    "outside_vector_function_unchanged": true,
+    "all_buffer_allocations_unchanged": true,
+    "all_numeric_api_calls_unchanged": true,
+    "barrier_count_unchanged": true,
+    "ownership_audit_n_values": 13000,
+    "ownership_cases": {
+      "cached": 3072,
+      "uncached": 9928
+    }
+  },
+  "compile": "NOT RUN: local machine lacks CANN toolchain",
+  "npu_correctness": "NOT RUN",
+  "performance": "NOT RUN; candidate, not a verified improvement",
+  "submission": "NOT SUBMITTED"
+}
