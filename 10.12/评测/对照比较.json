@@ -1,0 +1,162 @@
+{
+  "candidate_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "comparisons": [
+    {
+      "candidate": "v124_scale_output_bank_20261012",
+      "control": "v125_adjacent_control_20261012",
+      "candidate_estimate_common_T": 25.256099830660826,
+      "control_estimate_common_T": 24.754199069637686,
+      "estimate_delta": 0.5019007610231405,
+      "point_time_improvement_pct": [
+        -0.608272506082712,
+        0.2132196162047052,
+        -0.7500000000000062,
+        6.8181818181818254,
+        6.428571428571435,
+        3.8812785388127837,
+        3.9159698143993507,
+        3.101768777236602,
+        4.89664520501525,
+        2.2259414225941394,
+        1.7368873602751471,
+        2.992915974646641,
+        0.09939091210275144,
+        3.1479402923455995,
+        1.8633540372670807
+      ],
+      "faster_points": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "equal_points": []
+    },
+    {
+      "candidate": "v127_scale_output_repeat_20261012",
+      "control": "v125_adjacent_control_20261012",
+      "candidate_estimate_common_T": 25.054025800353656,
+      "control_estimate_common_T": 24.754199069637686,
+      "estimate_delta": 0.29982673071597077,
+      "point_time_improvement_pct": [
+        -2.4330900243308915,
+        1.4925373134328417,
+        -0.12499999999999734,
+        3.1313131313131364,
+        2.6666666666666607,
+        3.4817351598173483,
+        2.447481133999598,
+        2.520721182602754,
+        2.4398508980006857,
+        1.6401673640167311,
+        0.9630266552020553,
+        2.698030708741477,
+        0.8384515405591284,
+        2.429332610855239,
+        1.8633540372670807
+      ],
+      "faster_points": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "equal_points": []
+    },
+    {
+      "candidate": "v129_scale_output_final_repeat_20261012",
+      "control": "v128_adjacent_control_repeat_20261012",
+      "candidate_estimate_common_T": 25.09335906043949,
+      "control_estimate_common_T": 24.87809348989332,
+      "estimate_delta": 0.21526557054616902,
+      "point_time_improvement_pct": [
+        0.48426150121064343,
+        0.6423982869379068,
+        2.0987654320987645,
+        0.620155038759695,
+        0.0,
+        1.3631090487238948,
+        1.4239218877135797,
+        2.133310486634677,
+        3.890198720107784,
+        2.0416736682910375,
+        0.8736268488885088,
+        2.255588015490178,
+        1.156746840603348,
+        0.636626920969551,
+        1.8518518518518519
+      ],
+      "faster_points": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "equal_points": [
+        5
+      ]
+    }
+  ],
+  "mean_estimate_delta": 0.3389976874284268,
+  "all_three_estimate_deltas_positive": true,
+  "limitation": "Three identical-source device runs versus two adjacent controls. First two comparisons share one control and are not independent samples. Estimates use the initial v91 reference times; point10/12 public reference times changed later. No claim of statistical significance or universal speedup. Fourth restoration run is included separately and its score regressed; the first-three paired mean must not be presented as evidence of four stable gains.",
+  "fourth_run": {
+    "version": "v132_selected_restore_20261012",
+    "estimate_common_T": 24.579715636149224,
+    "nearest_earlier_control": "v128_adjacent_control_repeat_20261012",
+    "estimate_delta_vs_earlier_control": -0.2983778537440962,
+    "point_time_improvement_pct_vs_earlier_control": [
+      -9.200968523002418,
+      -14.346895074946467,
+      0.24691358024690832,
+      -2.7390180878552846,
+      -5.516898608349898,
+      -1.3921113689095244,
+      0.4882017900732199,
+      1.3536668951336517,
+      1.9366790165038827,
+      0.42009746261132586,
+      0.9730992128708589,
+      2.2691758951015717,
+      0.254790052996331,
+      0.31179064367156134,
+      1.8518518518518519
+    ],
+    "finding": "Fourth run passes all points but has slower small-point timings and a lower total estimate. Points10..15 remain faster than the earlier control. It is not a new paired control and prevents claiming stable whole-score gains."
+  },
+  "stable_total_score_gain_established": false,
+  "all_four_candidate_score_range": [
+    24.579715636149224,
+    25.256099830660826
+  ],
+  "all_four_candidate_mean_estimate": 24.9958000819008,
+  "all_four_candidate_median_estimate": 25.073692430396573
+}

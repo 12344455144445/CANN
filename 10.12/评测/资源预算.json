@@ -1,0 +1,16 @@
+{
+  "hardware_UB_bytes": 196608,
+  "Select_API_reserve_bytes": 8192,
+  "baseline_explicit_UB_bytes": 170880,
+  "baseline_total_UB_bytes": 179072,
+  "selected_explicit_UB_bytes": 166784,
+  "selected_total_UB_bytes": 174976,
+  "selected_remaining_UB_bytes_after_reserve": 21632,
+  "v110_explicit_UB_bytes": 195456,
+  "v110_total_UB_bytes": 203648,
+  "conclusion": "Selected source remains below the conservative limit. v110 fails worst-case resource proof and is excluded despite its15 device passes.",
+  "sources": [
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0070.html",
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/programug/Ascendcopdevg/atlas_ascendc_best_practices_10_00020.html"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "12344455144445/CANN",
+  "folder": "10.12",
+  "competition_confirmed": 40,
+  "competition_daily_limit": 50,
+  "competition_reserved": 10,
+  "last_platform_source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "source_PR": "https://github.com/12344455144445/CANN/pull/5",
+  "source_PR_draft": true,
+  "source_branch_commit": "11e92726ba7a06d92eae3b1ff232dd8fe97a142d",
+  "default_recommended_source_replaced": false,
+  "stable_total_score_gain_established": false,
+  "quarantined": [
+    "v123_cube_iterate_all_20261012",
+    "v94_latest_padded_20261012",
+    "v96_smallN_batch8_20261012",
+    "v110_partition_activation_cache_20261012"
+  ],
+  "handoff_upload_authorized": true
+}

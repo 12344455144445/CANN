@@ -1,0 +1,26 @@
+[
+  {
+    "number": 2,
+    "head_sha": "769582a6a96a675e1f15606512562fb51c80a61f",
+    "approved": true,
+    "review_id": 5488915904,
+    "review_url": "https://github.com/12344455144445/CANN/pull/2#pullrequestreview-5488915904",
+    "scope": "Approval as isolated experimental archive; device validation required before recommendation"
+  },
+  {
+    "number": 3,
+    "head_sha": "5f04b7c379a4125c762b9abcadad016a54b41909",
+    "approved": true,
+    "review_id": 5488947026,
+    "review_url": "https://github.com/12344455144445/CANN/pull/3#pullrequestreview-5488947026",
+    "scope": "Approval as isolated experimental archive; device validation required before recommendation"
+  },
+  {
+    "number": 4,
+    "head_sha": "4d7892710413610df3ceb25f34de274d3964678c",
+    "approved": true,
+    "review_id": 5488942834,
+    "review_url": "https://github.com/12344455144445/CANN/pull/4#pullrequestreview-5488942834",
+    "scope": "Approval as isolated experimental archive; device validation required before recommendation"
+  }
+]

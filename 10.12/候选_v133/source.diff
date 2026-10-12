@@ -1,0 +1,26 @@
+--- v124
++++ v133_vector_zero_scale_20261012
+@@ -882,9 +882,20 @@
+         alignedRows,
+         QmqAlignUp(alignedRows, 64U));
+     // [OPT-V45-B1] AllocTensor 上移（纯顺序变化，内容一字未改）。
+-    for (uint32_t row = 0; row < rows; ++row) {
+-        if (rowMaxLocal.GetValue(row) <= 0.0f) {
+-            rowScaleLocal.SetValue(row, 1.0f);
++    if (rows >= 64U && alignedRows % 64U == 0U) {
++        // The count API requires a full 256-byte FP32 comparison block.
++        Compares(scaleMaskLocal, rowMaxLocal, 0.0f, CMPMODE::LE, alignedRows);
++        PipeBarrier<PIPE_V>();
++        // Row maxima are dead after this comparison; reuse the bank as ones.
++        Duplicate(rowMaxLocal, 1.0f, alignedRows);
++        PipeBarrier<PIPE_V>();
++        Select(rowScaleLocal, scaleMaskLocal, rowMaxLocal, rowScaleLocal,
++               SELMODE::VSEL_TENSOR_TENSOR_MODE, alignedRows);
++    } else {
++        for (uint32_t row = 0; row < rows; ++row) {
++            if (rowMaxLocal.GetValue(row) <= 0.0f) {
++                rowScaleLocal.SetValue(row, 1.0f);
++            }
+         }
+     }
+     PipeBarrier<PIPE_V>();

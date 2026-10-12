@@ -1,0 +1,6811 @@
+{
+  "records": [
+    {
+      "version": "v100_latest_control_repeat_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.96,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.32,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.86,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.55,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.71,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.68,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.34,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.77,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.26,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.72,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.4,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.16,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.24,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 772.72,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.96,
+        5.32,
+        7.86,
+        19.55,
+        20.71,
+        34.68,
+        49.34,
+        116.77,
+        59.26,
+        119.72,
+        231.4,
+        294.16,
+        392.24,
+        772.72,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3752.69,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.598370817536058,
+      "estimated_score_own_T": 24.598370817536058,
+      "delta_pct_vs_latest_control": [
+        8.082,
+        13.919,
+        -0.758,
+        -2.005,
+        0.339,
+        -0.488,
+        0.735,
+        -0.111,
+        -0.185,
+        1.004,
+        -0.078,
+        -0.112,
+        -0.064,
+        0.322,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.19664967452684579
+    },
+    {
+      "version": "v101_tinyvector_repeat_20261012",
+      "sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.63,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.84,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.09,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.24,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.87,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.45,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.69,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.95,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.35,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.35,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 230.83,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.26,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.7,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 780.05,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        7.63,
+        5.84,
+        8.09,
+        19.24,
+        19.87,
+        34.45,
+        48.69,
+        115.95,
+        58.35,
+        119.35,
+        230.83,
+        294.26,
+        391.7,
+        780.05,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3754.2999999999997,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.751765150976176,
+      "estimated_score_own_T": 24.751765150976176,
+      "delta_pct_vs_latest_control": [
+        -7.961,
+        25.054,
+        2.146,
+        -3.559,
+        -3.731,
+        -1.148,
+        -0.592,
+        -0.813,
+        -1.718,
+        0.692,
+        -0.324,
+        -0.078,
+        -0.201,
+        1.274,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.04325534108672713
+    },
+    {
+      "version": "v102_specialized_padding_20261012",
+      "sha256": "a9334c80ed026897e368b9eb3e49e2c9d11d72370c9cfa25b6927ced00ae385a",
+      "submitted_source_sha256": "a9334c80ed026897e368b9eb3e49e2c9d11d72370c9cfa25b6927ced00ae385a",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.05,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.2,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.0,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 22.65,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 26.12,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 38.26,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.94,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 104.99,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 63.68,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 125.05,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 233.07,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 299.32,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 394.46,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 789.02,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.05,
+        5.2,
+        8.0,
+        22.65,
+        26.12,
+        38.26,
+        48.94,
+        104.99,
+        63.68,
+        125.05,
+        233.07,
+        299.32,
+        394.46,
+        789.02,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3787.81,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 23.828808405478732,
+      "estimated_score_own_T": 23.828808405478732,
+      "delta_pct_vs_latest_control": [
+        9.168,
+        11.349,
+        1.01,
+        13.534,
+        26.55,
+        9.785,
+        -0.082,
+        -10.188,
+        7.26,
+        5.501,
+        0.643,
+        1.64,
+        0.502,
+        2.438,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.9662120865841715
+    },
+    {
+      "version": "v103_vector_scale_copy_20261012",
+      "sha256": "b680d48de132aef5e8c5a493cfd2b14e9f74eacd97e4080a117461c28dd81e85",
+      "submitted_source_sha256": "b680d48de132aef5e8c5a493cfd2b14e9f74eacd97e4080a117461c28dd81e85",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.32,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.6,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.96,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.31,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.94,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.36,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.5,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.08,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.53,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.47,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.91,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 293.09,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.45,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 779.61,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.32,
+        4.6,
+        7.96,
+        19.31,
+        19.94,
+        34.36,
+        48.5,
+        116.08,
+        58.53,
+        118.47,
+        231.91,
+        293.09,
+        391.45,
+        779.61,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3753.13,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.87143567771313,
+      "estimated_score_own_T": 24.87143567771313,
+      "delta_pct_vs_latest_control": [
+        12.425,
+        -1.499,
+        0.505,
+        -3.208,
+        -3.391,
+        -1.406,
+        -0.98,
+        -0.701,
+        -1.415,
+        -0.051,
+        0.142,
+        -0.475,
+        -0.265,
+        1.217,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": 0.07641518565022665
+    },
+    {
+      "version": "v104_retain_single_batch_20261012",
+      "sha256": "c226b95ea175102ac1bc0a6b428df1e09b6e32f04ad4fb5f3668672fd82cdee3",
+      "submitted_source_sha256": "c226b95ea175102ac1bc0a6b428df1e09b6e32f04ad4fb5f3668672fd82cdee3",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.43,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 6.18,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.15,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 22.92,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.85,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 36.36,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 50.62,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 121.52,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 60.19,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 121.11,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 234.44,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 296.16,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 394.68,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 772.57,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.43,
+        6.18,
+        8.15,
+        22.92,
+        21.85,
+        36.36,
+        50.62,
+        121.52,
+        60.19,
+        121.11,
+        234.44,
+        296.16,
+        394.68,
+        772.57,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3775.1800000000003,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 23.980006010050943,
+      "estimated_score_own_T": 23.980006010050943,
+      "delta_pct_vs_latest_control": [
+        1.689,
+        32.334,
+        2.904,
+        14.887,
+        5.862,
+        4.333,
+        3.348,
+        3.952,
+        1.381,
+        2.177,
+        1.235,
+        0.567,
+        0.558,
+        0.303,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.8150144820119607
+    },
+    {
+      "version": "v105_tinyvector_scale_copy_20261012",
+      "sha256": "35668aae64fd8b5134ec1a5649919c429c606ddee0dee1834500a9b8c359b22e",
+      "submitted_source_sha256": "35668aae64fd8b5134ec1a5649919c429c606ddee0dee1834500a9b8c359b22e",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.85,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.92,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.26,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.77,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.62,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.13,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.2,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.76,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.47,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.07,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.28,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.43,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.51,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 772.87,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        7.85,
+        4.92,
+        8.26,
+        19.77,
+        20.62,
+        35.13,
+        49.2,
+        116.76,
+        59.47,
+        119.07,
+        232.28,
+        294.43,
+        393.51,
+        772.87,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3754.14,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.720900719562053,
+      "estimated_score_own_T": 24.720900719562053,
+      "delta_pct_vs_latest_control": [
+        -5.308,
+        5.353,
+        4.293,
+        -0.902,
+        -0.097,
+        0.803,
+        0.449,
+        -0.12,
+        0.168,
+        0.456,
+        0.302,
+        -0.02,
+        0.26,
+        0.341,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.07411977250085044
+    },
+    {
+      "version": "v106_mediumN_batch8_20261012",
+      "sha256": "c45c43ccc09c5796415e59fa964c34fafb43ac7c0efaf21584dec8e037826350",
+      "submitted_source_sha256": "c45c43ccc09c5796415e59fa964c34fafb43ac7c0efaf21584dec8e037826350",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.28,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.36,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.36,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.02,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.05,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.46,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.34,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.57,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.73,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.56,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.91,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.92,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.07,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 782.58,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.28,
+        5.36,
+        8.36,
+        20.02,
+        21.05,
+        35.46,
+        49.34,
+        116.57,
+        59.73,
+        119.56,
+        232.91,
+        294.92,
+        393.07,
+        782.58,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3768.21,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.376997175292257,
+      "estimated_score_own_T": 24.376997175292257,
+      "delta_pct_vs_latest_control": [
+        11.942,
+        14.775,
+        5.556,
+        0.351,
+        1.986,
+        1.75,
+        0.735,
+        -0.282,
+        0.606,
+        0.869,
+        0.574,
+        0.146,
+        0.148,
+        1.602,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.41802331677064686
+    },
+    {
+      "version": "v107_final_control_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.96,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.48,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.13,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.45,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.04,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.6,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 47.88,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.54,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 57.69,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.41,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 229.93,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 293.13,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.41,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 763.82,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.96,
+        5.48,
+        8.13,
+        18.45,
+        19.04,
+        33.6,
+        47.88,
+        115.54,
+        57.69,
+        118.41,
+        229.93,
+        293.13,
+        391.41,
+        763.82,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3731.4700000000003,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.9208057896412,
+      "estimated_score_own_T": 24.9208057896412,
+      "delta_pct_vs_latest_control": [
+        8.082,
+        17.345,
+        2.652,
+        -7.519,
+        -7.752,
+        -3.587,
+        -2.246,
+        -1.163,
+        -2.83,
+        -0.101,
+        -0.712,
+        -0.462,
+        -0.275,
+        -0.834,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": 0.1257852975782967
+    },
+    {
+      "version": "v108_tinyvector_final_20261012",
+      "sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.26,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.86,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.13,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.48,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.42,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.73,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.64,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.21,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.03,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.11,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.18,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.5,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.0,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 777.84,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.26,
+        5.86,
+        8.13,
+        19.48,
+        20.42,
+        34.73,
+        48.64,
+        116.21,
+        59.03,
+        119.11,
+        232.18,
+        294.5,
+        393.0,
+        777.84,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3747.39,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.57953346739502,
+      "estimated_score_own_T": 24.57953346739502,
+      "delta_pct_vs_latest_control": [
+        -0.362,
+        25.482,
+        2.652,
+        -2.356,
+        -1.066,
+        -0.344,
+        -0.694,
+        -0.59,
+        -0.573,
+        0.489,
+        0.259,
+        0.003,
+        0.13,
+        0.987,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.21548702466788328
+    },
+    {
+      "version": "v109_short_scalar_scale_20261012",
+      "sha256": "da2385a3ff71de4af913f5a877af54c2e6ee45823131352df8811f27806dc9a4",
+      "submitted_source_sha256": "da2385a3ff71de4af913f5a877af54c2e6ee45823131352df8811f27806dc9a4",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.02,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.7,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.97,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.42,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.16,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.55,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.83,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.25,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.47,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.88,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.86,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.8,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.98,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 775.98,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.02,
+        4.7,
+        7.97,
+        20.42,
+        21.16,
+        35.55,
+        49.83,
+        117.25,
+        59.47,
+        119.88,
+        231.86,
+        294.8,
+        392.98,
+        775.98,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3760.87,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.56297123645225,
+      "estimated_score_own_T": 24.56297123645225,
+      "delta_pct_vs_latest_control": [
+        8.806,
+        0.642,
+        0.631,
+        2.356,
+        2.519,
+        2.009,
+        1.735,
+        0.299,
+        0.168,
+        1.139,
+        0.121,
+        0.105,
+        0.125,
+        0.745,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.23204925561065437
+    },
+    {
+      "version": "v110_partition_activation_cache_20261012",
+      "sha256": "13a2526825507c6c68f7cd2460b0580826722aadcafb6beaf011556682a6ba6b",
+      "submitted_source_sha256": "13a2526825507c6c68f7cd2460b0580826722aadcafb6beaf011556682a6ba6b",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": false,
+      "excluded_reason": "Worst-case explicit UB allocation195456B plus documented Select mode1/2 temporary reserve8192B totals203648B, exceeding Atlas A3 UB196608B. Official15-point success does not establish safety at1024-row worst case; excluded pending redesign. No claim that an observed device run overflowed.",
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.17,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 6.12,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.31,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.74,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.86,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.51,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.08,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.61,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.61,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.2,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.05,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.05,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.2,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 789.54,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.17,
+        6.12,
+        8.31,
+        18.74,
+        19.86,
+        34.51,
+        49.08,
+        116.61,
+        58.61,
+        120.2,
+        232.05,
+        295.05,
+        393.2,
+        789.54,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3771.05,
+      "eligible_for_recommendation": false,
+      "estimated_score_common_T": 24.520513737385674,
+      "estimated_score_own_T": 24.520513737385674,
+      "delta_pct_vs_latest_control": [
+        10.615,
+        31.049,
+        4.924,
+        -6.065,
+        -3.779,
+        -0.976,
+        0.204,
+        -0.248,
+        -1.28,
+        1.409,
+        0.203,
+        0.19,
+        0.181,
+        2.506,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.27450675467722974
+    },
+    {
+      "version": "v111_general_odd_cast_20261012",
+      "sha256": "508a8cfd6a7972398c149934ea9084af9ad22878856e3e0c3f499f5deed7230a",
+      "submitted_source_sha256": "508a8cfd6a7972398c149934ea9084af9ad22878856e3e0c3f499f5deed7230a",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.0,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.4,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.94,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.86,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.3,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.81,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 47.9,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.81,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 57.2,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.39,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 229.56,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 289.79,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 386.66,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 764.04,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1590.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.0,
+        5.4,
+        7.94,
+        18.86,
+        19.3,
+        33.81,
+        47.9,
+        115.81,
+        57.2,
+        116.39,
+        229.56,
+        289.79,
+        386.66,
+        764.04,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3691.66,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.947305037760657,
+      "estimated_score_own_T": 24.947305037760657,
+      "delta_pct_vs_latest_control": [
+        8.565,
+        15.632,
+        0.253,
+        -5.464,
+        -6.492,
+        -2.984,
+        -2.205,
+        -0.932,
+        -3.655,
+        -1.805,
+        -0.872,
+        -1.596,
+        -1.485,
+        -0.805,
+        -1.852
+      ],
+      "estimated_score_delta_vs_latest_control": 0.15228454569775352
+    },
+    {
+      "version": "v112_tiny_odd_cast_20261012",
+      "sha256": "113698ede514e6e200621a4a9dd166704520ab2a61e578886fd82926d73a5794",
+      "submitted_source_sha256": "113698ede514e6e200621a4a9dd166704520ab2a61e578886fd82926d73a5794",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.33,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.36,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.23,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.02,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.53,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.17,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.88,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.13,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.74,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.95,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.37,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.96,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.35,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 759.81,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.33,
+        5.36,
+        8.23,
+        20.02,
+        20.53,
+        35.17,
+        49.88,
+        117.13,
+        59.74,
+        119.95,
+        232.37,
+        294.96,
+        393.35,
+        759.81,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3745.83,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.44546480333475,
+      "estimated_score_own_T": 24.44546480333475,
+      "delta_pct_vs_latest_control": [
+        12.545,
+        14.775,
+        3.914,
+        0.351,
+        -0.533,
+        0.918,
+        1.837,
+        0.197,
+        0.623,
+        1.198,
+        0.341,
+        0.16,
+        0.219,
+        -1.354,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.34955568872815235
+    },
+    {
+      "version": "v113_all_odd_cast_20261012",
+      "sha256": "631bffc6ef7a7fa679e9eb243b40d07452218d7df931ef2d8d1464818a623bcc",
+      "submitted_source_hash_match": false,
+      "source_review_hash_match": true,
+      "status": "未提交",
+      "source_review_pass": true
+    },
+    {
+      "version": "v114_odd_control_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.21,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.28,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.95,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.8,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.21,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.45,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 46.98,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.44,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 57.59,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.28,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.05,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 293.58,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.24,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 768.58,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.21,
+        5.28,
+        7.95,
+        18.8,
+        19.21,
+        33.45,
+        46.98,
+        115.44,
+        57.59,
+        119.28,
+        231.05,
+        293.58,
+        391.24,
+        768.58,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3727.64,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.93047571709297,
+      "estimated_score_own_T": 24.93047571709297,
+      "delta_pct_vs_latest_control": [
+        11.098,
+        13.062,
+        0.379,
+        -5.764,
+        -6.928,
+        -4.017,
+        -4.083,
+        -1.249,
+        -2.998,
+        0.633,
+        -0.229,
+        -0.309,
+        -0.318,
+        -0.216,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": 0.1354552250300678
+    },
+    {
+      "version": "v115_general_odd_repeat_20261012",
+      "sha256": "508a8cfd6a7972398c149934ea9084af9ad22878856e3e0c3f499f5deed7230a",
+      "submitted_source_sha256": "508a8cfd6a7972398c149934ea9084af9ad22878856e3e0c3f499f5deed7230a",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.65,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.69,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.19,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.23,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.07,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.79,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.44,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.72,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.44,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.43,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 228.16,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 290.1,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 387.58,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 749.24,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1590.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.65,
+        4.69,
+        8.19,
+        19.23,
+        20.07,
+        34.79,
+        48.44,
+        116.72,
+        58.44,
+        117.43,
+        228.16,
+        290.1,
+        387.58,
+        749.24,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3681.73,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.93797634851648,
+      "estimated_score_own_T": 24.93797634851648,
+      "delta_pct_vs_latest_control": [
+        4.343,
+        0.428,
+        3.409,
+        -3.609,
+        -2.762,
+        -0.172,
+        -1.102,
+        -0.154,
+        -1.566,
+        -0.928,
+        -1.477,
+        -1.491,
+        -1.251,
+        -2.726,
+        -1.852
+      ],
+      "estimated_score_delta_vs_latest_control": 0.14295585645357534
+    },
+    {
+      "version": "v116_quotient_bank_reuse_20261012",
+      "sha256": "9ac087888c2f11d2d5616a92d3b18cfa5fa977027f7f5083743b7840d33bcec4",
+      "submitted_source_sha256": "9ac087888c2f11d2d5616a92d3b18cfa5fa977027f7f5083743b7840d33bcec4",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.29,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.34,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.02,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.96,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.34,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.97,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.16,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.13,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.62,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.29,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 226.1,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 286.8,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 397.29,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 736.51,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1600.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.29,
+        5.34,
+        8.02,
+        19.96,
+        21.34,
+        34.97,
+        49.16,
+        117.13,
+        59.62,
+        120.29,
+        226.1,
+        286.8,
+        397.29,
+        736.51,
+        1600.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3690.82,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.612151585599275,
+      "estimated_score_own_T": 24.612151585599275,
+      "delta_pct_vs_latest_control": [
+        0.0,
+        14.347,
+        1.263,
+        0.05,
+        3.391,
+        0.344,
+        0.367,
+        0.197,
+        0.421,
+        1.485,
+        -2.366,
+        -2.611,
+        1.223,
+        -4.379,
+        -1.235
+      ],
+      "estimated_score_delta_vs_latest_control": -0.18286890646362863
+    },
+    {
+      "version": "v117_mediumM_full_groups_20261012",
+      "sha256": "7a8378dbf3171a8261239118594c806182bddf5ae8e7465960a49fe44892a543",
+      "submitted_source_sha256": "7a8378dbf3171a8261239118594c806182bddf5ae8e7465960a49fe44892a543",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.93,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.4,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.03,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.18,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.88,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.32,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.53,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.99,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.64,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.98,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.3,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.65,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 390.93,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 775.14,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.93,
+        5.4,
+        8.03,
+        20.18,
+        19.88,
+        34.32,
+        48.53,
+        115.99,
+        58.64,
+        117.98,
+        231.3,
+        294.65,
+        390.93,
+        775.14,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3749.9,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.640759468895194,
+      "estimated_score_own_T": 24.640759468895194,
+      "delta_pct_vs_latest_control": [
+        7.72,
+        15.632,
+        1.389,
+        1.153,
+        -3.682,
+        -1.521,
+        -0.919,
+        -0.778,
+        -1.23,
+        -0.464,
+        -0.121,
+        0.054,
+        -0.397,
+        0.636,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.1542610231677095
+    },
+    {
+      "version": "v118_cube_K_stagger_20261012",
+      "sha256": "dc25049350782a5a7447bf9dedc285d2a3e29ea51ba1cfa1d90a2d3b0cd70e8c",
+      "submitted_source_sha256": "dc25049350782a5a7447bf9dedc285d2a3e29ea51ba1cfa1d90a2d3b0cd70e8c",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.24,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.63,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.13,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.56,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.32,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.28,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.83,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.65,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.98,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.23,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.76,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.17,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.46,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 778.63,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.24,
+        4.63,
+        8.13,
+        20.56,
+        21.32,
+        35.28,
+        49.83,
+        117.65,
+        59.98,
+        120.23,
+        232.76,
+        295.17,
+        393.46,
+        778.63,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3755.87,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.60674831415495,
+      "estimated_score_own_T": 24.60674831415495,
+      "delta_pct_vs_latest_control": [
+        -0.603,
+        -0.857,
+        2.652,
+        3.058,
+        3.295,
+        1.234,
+        1.735,
+        0.642,
+        1.027,
+        1.434,
+        0.51,
+        0.231,
+        0.247,
+        1.089,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.18827217790795459
+    },
+    {
+      "version": "v119_cube_unit_flag_20261012",
+      "sha256": "911ce85505779d4dc0673dfafaa76e4174cd4fb7e3a3bc00bb769cc880a451b5",
+      "submitted_source_sha256": "911ce85505779d4dc0673dfafaa76e4174cd4fb7e3a3bc00bb769cc880a451b5",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.07,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.3,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.04,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.36,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.16,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.48,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.53,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.96,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.23,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.16,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.42,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 288.95,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 380.41,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 759.2,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.07,
+        5.3,
+        8.04,
+        19.36,
+        20.16,
+        34.48,
+        48.53,
+        115.96,
+        59.23,
+        118.16,
+        231.42,
+        288.95,
+        380.41,
+        759.2,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3708.27,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.729189993706505,
+      "estimated_score_own_T": 24.729189993706505,
+      "delta_pct_vs_latest_control": [
+        9.409,
+        13.49,
+        1.515,
+        -2.957,
+        -2.326,
+        -1.062,
+        -0.919,
+        -0.804,
+        -0.236,
+        -0.312,
+        -0.069,
+        -1.881,
+        -3.078,
+        -1.433,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.06583049835639798
+    },
+    {
+      "version": "v120_tiny_single_arena_20261012",
+      "sha256": "cac03215a6cd55a3a568fe558b2ccafd706d2abd4ff980d4d646b6cdb1f61737",
+      "submitted_source_sha256": "cac03215a6cd55a3a568fe558b2ccafd706d2abd4ff980d4d646b6cdb1f61737",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.57,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.24,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.44,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.79,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.76,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.88,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.83,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.15,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.35,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.35,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 233.24,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.01,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.59,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 777.79,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.57,
+        5.24,
+        8.44,
+        19.79,
+        20.76,
+        34.88,
+        49.83,
+        117.15,
+        59.35,
+        120.35,
+        233.24,
+        295.01,
+        391.59,
+        777.79,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3761.99,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.511748112532178,
+      "estimated_score_own_T": 24.511748112532178,
+      "delta_pct_vs_latest_control": [
+        3.378,
+        12.206,
+        6.566,
+        -0.802,
+        0.581,
+        0.086,
+        1.735,
+        0.214,
+        -0.034,
+        1.535,
+        0.717,
+        0.177,
+        -0.229,
+        0.98,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.28327237953072526
+    },
+    {
+      "version": "v121_fp32_aligned_batch_20261012",
+      "sha256": "169f44996b303de74cbae1a3c45c348d6a583a5177f25077caccbb6ce49ca972",
+      "submitted_source_sha256": "169f44996b303de74cbae1a3c45c348d6a583a5177f25077caccbb6ce49ca972",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.32,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.78,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.85,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.15,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.42,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.54,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.04,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.73,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.2,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.67,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.69,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.27,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.48,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 772.54,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.32,
+        4.78,
+        7.85,
+        20.15,
+        21.42,
+        35.54,
+        49.04,
+        116.73,
+        59.2,
+        119.67,
+        232.69,
+        294.27,
+        391.48,
+        772.54,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3753.68,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.65977338566792,
+      "estimated_score_own_T": 24.65977338566792,
+      "delta_pct_vs_latest_control": [
+        0.362,
+        2.355,
+        -0.884,
+        1.003,
+        3.779,
+        1.98,
+        0.122,
+        -0.145,
+        -0.286,
+        0.962,
+        0.479,
+        -0.075,
+        -0.257,
+        0.299,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.13524710639498494
+    },
+    {
+      "version": "v122_cube_baseN768_20261012",
+      "sha256": "c5ec4231309b49abcefea624d31729452cd4c57ad1463fb011fb3432573803d8",
+      "submitted_source_sha256": "c5ec4231309b49abcefea624d31729452cd4c57ad1463fb011fb3432573803d8",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.31,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.66,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.08,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.32,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.34,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.7,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.72,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.38,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 60.71,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 127.32,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 257.55,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 311.99,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 413.87,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 785.37,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1760.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.31,
+        4.66,
+        8.08,
+        20.32,
+        21.34,
+        35.7,
+        49.72,
+        117.38,
+        60.71,
+        127.32,
+        257.55,
+        311.99,
+        413.87,
+        785.37,
+        1760.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3982.32,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.303582452785857,
+      "estimated_score_own_T": 24.303582452785857,
+      "delta_pct_vs_latest_control": [
+        0.241,
+        -0.214,
+        2.02,
+        1.855,
+        3.391,
+        2.439,
+        1.511,
+        0.411,
+        2.257,
+        7.416,
+        11.214,
+        5.942,
+        5.447,
+        1.964,
+        8.642
+      ],
+      "estimated_score_delta_vs_latest_control": -0.4914380392770461
+    },
+    {
+      "version": "v123_cube_iterate_all_20261012",
+      "sha256": "f2451267b08b092b5bf6ddf48c41078cad9cd463fc5bd09e0b686213ce713809",
+      "submitted_source_sha256": "f2451267b08b092b5bf6ddf48c41078cad9cd463fc5bd09e0b686213ce713809",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Compile Error",
+      "source_review_pass": false,
+      "excluded_reason": "Device compilation proved iterateMode storage is unsigned char; decltype(field)::enum qualification is invalid. Do not resubmit this source; v130 corrects the qualifier.",
+      "points": [],
+      "all_pass": false,
+      "times_us": [],
+      "reference_us": [],
+      "sum_us": 0
+    },
+    {
+      "version": "v124_scale_output_bank_20261012",
+      "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.27,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.68,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.06,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.45,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.65,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.68,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 47.11,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 113.4,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 56.13,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.84,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 228.56,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 286.2,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.0,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 750.71,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1580.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.27,
+        4.68,
+        8.06,
+        18.45,
+        19.65,
+        33.68,
+        47.11,
+        113.4,
+        56.13,
+        116.84,
+        228.56,
+        286.2,
+        392.0,
+        750.71,
+        1580.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3663.7400000000002,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 25.256099830660826,
+      "estimated_score_own_T": 25.256099830660826,
+      "delta_pct_vs_latest_control": [
+        -0.241,
+        0.214,
+        1.768,
+        -7.519,
+        -4.797,
+        -3.357,
+        -3.818,
+        -2.994,
+        -5.457,
+        -1.426,
+        -1.304,
+        -2.815,
+        -0.125,
+        -2.536,
+        -2.469
+      ],
+      "estimated_score_delta_vs_latest_control": 0.4610793385979228
+    },
+    {
+      "version": "v125_adjacent_control_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.22,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.69,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.0,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.8,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.0,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.04,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.03,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.03,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.02,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.5,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.6,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.03,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.39,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 775.11,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.22,
+        4.69,
+        8.0,
+        19.8,
+        21.0,
+        35.04,
+        49.03,
+        117.03,
+        59.02,
+        119.5,
+        232.6,
+        295.03,
+        392.39,
+        775.11,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3746.46,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.754199069637686,
+      "estimated_score_own_T": 24.68838123227356,
+      "delta_pct_vs_latest_control": [
+        -0.844,
+        0.428,
+        1.01,
+        -0.752,
+        1.744,
+        0.545,
+        0.102,
+        0.111,
+        -0.59,
+        0.818,
+        0.44,
+        0.183,
+        -0.025,
+        0.632,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.04082142242521769
+    },
+    {
+      "version": "v126_general_odd_unit_flag_20261012",
+      "sha256": "74593682b9d1da799fa5c4b885529fab1d697d0e2d09d6d13587544d2613d423",
+      "submitted_source_hash_match": false,
+      "source_review_hash_match": true,
+      "status": "未提交",
+      "source_review_pass": true
+    },
+    {
+      "version": "v127_scale_output_repeat_20261012",
+      "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.42,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.62,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.01,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.18,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.44,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.82,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 47.83,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 114.08,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 57.58,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.54,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 230.36,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 287.07,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 389.1,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 756.28,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1580.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.42,
+        4.62,
+        8.01,
+        19.18,
+        20.44,
+        33.82,
+        47.83,
+        114.08,
+        57.58,
+        117.54,
+        230.36,
+        287.07,
+        389.1,
+        756.28,
+        1580.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3674.33,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 25.054025800353656,
+      "estimated_score_own_T": 24.986693224477616,
+      "delta_pct_vs_latest_control": [
+        1.568,
+        -1.071,
+        1.136,
+        -3.86,
+        -0.969,
+        -2.956,
+        -2.348,
+        -2.412,
+        -3.015,
+        -0.835,
+        -0.527,
+        -2.52,
+        -0.864,
+        -1.812,
+        -2.469
+      ],
+      "estimated_score_delta_vs_latest_control": 0.2590053082907531
+    },
+    {
+      "version": "v128_adjacent_control_repeat_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.26,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.67,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.1,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.35,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.12,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.48,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.16,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.72,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.38,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.02,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.22,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.38,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.48,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 766.54,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.26,
+        4.67,
+        8.1,
+        19.35,
+        20.12,
+        34.48,
+        49.16,
+        116.72,
+        59.38,
+        119.02,
+        231.22,
+        294.38,
+        392.48,
+        766.54,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3743.88,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.87809348989332,
+      "estimated_score_own_T": 24.811966203406875,
+      "delta_pct_vs_latest_control": [
+        -0.362,
+        0.0,
+        2.273,
+        -3.008,
+        -2.519,
+        -1.062,
+        0.367,
+        -0.154,
+        0.017,
+        0.413,
+        -0.155,
+        -0.037,
+        -0.003,
+        -0.48,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": 0.083072997830417
+    },
+    {
+      "version": "v129_scale_output_final_repeat_20261012",
+      "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.22,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.64,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.93,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.23,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.12,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.01,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.46,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 114.23,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 57.07,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.59,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 229.2,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 287.74,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 387.94,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 761.66,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1590.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.22,
+        4.64,
+        7.93,
+        19.23,
+        20.12,
+        34.01,
+        48.46,
+        114.23,
+        57.07,
+        116.59,
+        229.2,
+        287.74,
+        387.94,
+        761.66,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3687.04,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 25.09335906043949,
+      "estimated_score_own_T": 25.025465322429586,
+      "delta_pct_vs_latest_control": [
+        -0.844,
+        -0.642,
+        0.126,
+        -3.609,
+        -2.519,
+        -2.41,
+        -1.062,
+        -2.284,
+        -3.874,
+        -1.637,
+        -1.028,
+        -2.292,
+        -1.159,
+        -1.114,
+        -1.852
+      ],
+      "estimated_score_delta_vs_latest_control": 0.298338568376586
+    },
+    {
+      "version": "v130_cube_iterate_all_fix_20261012",
+      "sha256": "389279d396d8fa95df3de2a196da7fbc4d5b64f8029d964307c3a0a596f8880f",
+      "submitted_source_sha256": "389279d396d8fa95df3de2a196da7fbc4d5b64f8029d964307c3a0a596f8880f",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.6,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.64,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.06,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.12,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.48,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.86,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.17,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.06,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.17,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.42,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.66,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.78,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 390.95,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 766.72,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.6,
+        4.64,
+        8.06,
+        20.12,
+        20.48,
+        34.86,
+        49.17,
+        117.06,
+        59.17,
+        120.42,
+        232.66,
+        295.78,
+        390.95,
+        766.72,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3748.69,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.731431197980218,
+      "estimated_score_own_T": 24.666176718558,
+      "delta_pct_vs_latest_control": [
+        3.739,
+        -0.642,
+        1.768,
+        0.852,
+        -0.775,
+        0.029,
+        0.388,
+        0.137,
+        -0.337,
+        1.595,
+        0.466,
+        0.438,
+        -0.392,
+        -0.457,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.06358929408268565
+    },
+    {
+      "version": "v131_scale_queue_only_20261012",
+      "sha256": "f753e200fae1d7008a1a4d4f822330186f50a34e38cd33d00e12b4a7caa167c0",
+      "submitted_source_sha256": "f753e200fae1d7008a1a4d4f822330186f50a34e38cd33d00e12b4a7caa167c0",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.66,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.38,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.21,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.26,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.18,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.8,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.29,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.78,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.84,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.51,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.85,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 293.84,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 396.82,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 778.71,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1630.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.66,
+        5.38,
+        8.21,
+        19.26,
+        20.18,
+        34.8,
+        48.29,
+        116.78,
+        58.84,
+        120.51,
+        231.85,
+        293.84,
+        396.82,
+        778.71,
+        1630.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3772.13,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.636301892695524,
+      "estimated_score_own_T": 24.571019042520696,
+      "delta_pct_vs_latest_control": [
+        4.463,
+        15.203,
+        3.662,
+        -3.459,
+        -2.229,
+        -0.143,
+        -1.409,
+        -0.103,
+        -0.893,
+        1.67,
+        0.117,
+        -0.221,
+        1.103,
+        1.1,
+        0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.1587185993673792
+    },
+    {
+      "version": "v132_selected_restore_20261012",
+      "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.02,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.34,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.08,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.88,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.23,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.96,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.92,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.14,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.23,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.52,
+          "ref_us": 36.3
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 228.97,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 287.7,
+          "ref_us": 73.4
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.48,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 764.15,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1590.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.02,
+        5.34,
+        8.08,
+        19.88,
+        21.23,
+        34.96,
+        48.92,
+        115.14,
+        58.23,
+        118.52,
+        228.97,
+        287.7,
+        391.48,
+        764.15,
+        1590.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        36.3,
+        54.34,
+        73.4,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3701.62,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.579715636149224,
+      "estimated_score_own_T": 24.513005693330797,
+      "delta_pct_vs_latest_control": [
+        8.806,
+        14.347,
+        2.02,
+        -0.351,
+        2.859,
+        0.316,
+        -0.122,
+        -1.506,
+        -1.92,
+        -0.008,
+        -1.127,
+        -2.306,
+        -0.257,
+        -0.791,
+        -1.852
+      ],
+      "estimated_score_delta_vs_latest_control": -0.2153048559136792
+    },
+    {
+      "version": "v133_vector_zero_scale_20261012",
+      "sha256": "fa9d53671ab82f1539db8d69f81c8f882336de2256dc20b18b5aa59d892b7035",
+      "submitted_source_hash_match": false,
+      "source_review_hash_match": true,
+      "status": "未提交",
+      "source_review_pass": true
+    },
+    {
+      "version": "v91_latest_control_20261012",
+      "sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_sha256": "183fcacfdb4bc1991097b65aaa289ee13d63b26058223e723f2097f131ce66d9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.29,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.67,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.92,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.95,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.64,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.85,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.98,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.9,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.37,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.53,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.58,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.49,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.49,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 770.24,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.29,
+        4.67,
+        7.92,
+        19.95,
+        20.64,
+        34.85,
+        48.98,
+        116.9,
+        59.37,
+        118.53,
+        231.58,
+        294.49,
+        392.49,
+        770.24,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3748.9,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.795020492062903,
+      "estimated_score_own_T": 24.795020492062903,
+      "delta_pct_vs_latest_control": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": 0.0
+    },
+    {
+      "version": "v92_prefetch16_20261012",
+      "sha256": "3f757d0ce1f26f5bc8193e7a651bcaa93ce2b13fd0ebfae806608ae9dfbc4d67",
+      "submitted_source_sha256": "3f757d0ce1f26f5bc8193e7a651bcaa93ce2b13fd0ebfae806608ae9dfbc4d67",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.95,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.33,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.01,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.42,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.3,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.55,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.76,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.77,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.81,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.09,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.52,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 294.97,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.22,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 780.18,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.95,
+        5.33,
+        8.01,
+        20.42,
+        21.3,
+        35.55,
+        49.76,
+        117.77,
+        59.81,
+        120.09,
+        231.52,
+        294.97,
+        393.22,
+        780.18,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3766.88,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.389856180652394,
+      "estimated_score_own_T": 24.389856180652394,
+      "delta_pct_vs_latest_control": [
+        7.961,
+        14.133,
+        1.136,
+        2.356,
+        3.198,
+        2.009,
+        1.592,
+        0.744,
+        0.741,
+        1.316,
+        -0.026,
+        0.163,
+        0.186,
+        1.291,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.405164311410509
+    },
+    {
+      "version": "v93_cache3072_20261012",
+      "sha256": "2c592c5571baad502e55d5157d954e8bb1bbc2c6c222e0a0a12a213499320851",
+      "submitted_source_sha256": "2c592c5571baad502e55d5157d954e8bb1bbc2c6c222e0a0a12a213499320851",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.26,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.32,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.89,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.32,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.01,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.29,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.11,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.57,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.61,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.35,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.88,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.25,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.58,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 763.65,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.26,
+        5.32,
+        7.89,
+        19.32,
+        20.01,
+        34.29,
+        48.11,
+        116.57,
+        58.61,
+        119.35,
+        231.88,
+        295.25,
+        391.58,
+        763.65,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3741.09,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.71121242050642,
+      "estimated_score_own_T": 24.71121242050642,
+      "delta_pct_vs_latest_control": [
+        11.701,
+        13.919,
+        -0.379,
+        -3.158,
+        -3.052,
+        -1.607,
+        -1.776,
+        -0.282,
+        -1.28,
+        0.692,
+        0.13,
+        0.258,
+        -0.232,
+        -0.856,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.08380807155648284
+    },
+    {
+      "version": "v94_latest_padded_20261012",
+      "sha256": "0a2afb46a816ccdc173b88b2557f4eb1486ba859baeca0d6b0641302bd31eaf9",
+      "submitted_source_sha256": "0a2afb46a816ccdc173b88b2557f4eb1486ba859baeca0d6b0641302bd31eaf9",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": false,
+      "excluded_reason": "Transplant lowered rowBatch gate to N>=32 while padded gate stayed N>=64: N33..63 unaligned could enter invalid flat batching. Platform 15/15 does not cover all shapes. Quarantined; corrected successor required.",
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.11,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.32,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.14,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.56,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.54,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.34,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.9,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 96.08,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 60.3,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.5,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 231.65,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.86,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.74,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 787.57,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.11,
+        5.32,
+        8.14,
+        20.56,
+        21.54,
+        35.34,
+        49.9,
+        96.08,
+        60.3,
+        119.5,
+        231.65,
+        295.86,
+        393.74,
+        787.57,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3744.61,
+      "eligible_for_recommendation": false,
+      "estimated_score_common_T": 24.429840412378606,
+      "estimated_score_own_T": 24.429840412378606,
+      "delta_pct_vs_latest_control": [
+        9.891,
+        13.919,
+        2.778,
+        3.058,
+        4.36,
+        1.406,
+        1.878,
+        -17.81,
+        1.566,
+        0.818,
+        0.03,
+        0.465,
+        0.318,
+        2.25,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.365180079684297
+    },
+    {
+      "version": "v95_latest_tinyvector_20261012",
+      "sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_sha256": "d24581110496fac4d86717d815ac5aed8ab1423635171eb6195b35bb4bf782df",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.26,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 4.85,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.23,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 18.66,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.15,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 33.41,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.24,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 115.26,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.05,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 118.45,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 230.66,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 293.52,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.73,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 780.19,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.26,
+        4.85,
+        8.23,
+        18.66,
+        19.15,
+        33.41,
+        48.24,
+        115.26,
+        58.05,
+        118.45,
+        230.66,
+        293.52,
+        391.73,
+        780.19,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3748.66,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 25.058115297784582,
+      "estimated_score_own_T": 25.058115297784582,
+      "delta_pct_vs_latest_control": [
+        -0.362,
+        3.854,
+        3.914,
+        -6.466,
+        -7.219,
+        -4.132,
+        -1.511,
+        -1.403,
+        -2.223,
+        -0.067,
+        -0.397,
+        -0.329,
+        -0.194,
+        1.292,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": 0.2630948057216784
+    },
+    {
+      "version": "v96_smallN_batch8_20261012",
+      "sha256": "594cf4734025b5fbeb8dbf0f90b7e36afec57524baea1c4fa9c89500f49d4b94",
+      "submitted_source_sha256": "594cf4734025b5fbeb8dbf0f90b7e36afec57524baea1c4fa9c89500f49d4b94",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": false,
+      "excluded_reason": "归约结果缓冲scalarMaxBuffer仍只有4*kFloatBlock*sizeof(float)，八行合批在r>=4时ReduceMax目的地址越界。15点评测不能覆盖所有触发形状，候选隔离，禁止推荐。",
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 9.59,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.34,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.28,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.51,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.08,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 35.21,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.14,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 117.06,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.88,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.22,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.91,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 296.1,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 392.22,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 765.01,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        9.59,
+        5.34,
+        8.28,
+        20.51,
+        21.08,
+        35.21,
+        49.14,
+        117.06,
+        59.88,
+        120.22,
+        232.91,
+        296.1,
+        392.22,
+        765.01,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3742.55,
+      "eligible_for_recommendation": false,
+      "estimated_score_common_T": 24.34750745669102,
+      "estimated_score_own_T": 24.34750745669102,
+      "delta_pct_vs_latest_control": [
+        15.682,
+        14.347,
+        4.545,
+        2.807,
+        2.132,
+        1.033,
+        0.327,
+        0.137,
+        0.859,
+        1.426,
+        0.574,
+        0.547,
+        -0.069,
+        -0.679,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.4475130353718839
+    },
+    {
+      "version": "v97_corrected_padded_20261012",
+      "sha256": "c6fb6e97bc20a212c7a60dc6cb2afc6904666b297bb4c4094ddf38397f8af486",
+      "submitted_source_sha256": "c6fb6e97bc20a212c7a60dc6cb2afc6904666b297bb4c4094ddf38397f8af486",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.39,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.34,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 7.96,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.65,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 22.44,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 36.27,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 49.19,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 96.5,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 59.9,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 123.01,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 236.37,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 300.79,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.49,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 782.7,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1620.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.39,
+        5.34,
+        7.96,
+        21.65,
+        22.44,
+        36.27,
+        49.19,
+        96.5,
+        59.9,
+        123.01,
+        236.37,
+        300.79,
+        391.49,
+        782.7,
+        1620.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3762.0,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.310834357222387,
+      "estimated_score_own_T": 24.310834357222387,
+      "delta_pct_vs_latest_control": [
+        1.206,
+        14.347,
+        0.505,
+        8.521,
+        8.721,
+        4.075,
+        0.429,
+        -17.451,
+        0.893,
+        3.78,
+        2.068,
+        2.139,
+        -0.255,
+        1.618,
+        0.0
+      ],
+      "estimated_score_delta_vs_latest_control": -0.48418613484051676
+    },
+    {
+      "version": "v98_padding_gap_only_20261012",
+      "sha256": "799b155042da1398734b4cbcba0fd8b598a1fbcc07b9e96dff587f422be7314d",
+      "submitted_source_sha256": "799b155042da1398734b4cbcba0fd8b598a1fbcc07b9e96dff587f422be7314d",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.95,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.38,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.11,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 21.64,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 22.08,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 36.71,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.81,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 97.24,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 62.17,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 120.15,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 229.68,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 296.03,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 393.25,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 771.07,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.95,
+        5.38,
+        8.11,
+        21.64,
+        22.08,
+        36.71,
+        48.81,
+        97.24,
+        62.17,
+        120.15,
+        229.68,
+        296.03,
+        393.25,
+        771.07,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3731.27,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.275089261125515,
+      "estimated_score_own_T": 24.275089261125515,
+      "delta_pct_vs_latest_control": [
+        7.961,
+        15.203,
+        2.399,
+        8.471,
+        6.977,
+        5.337,
+        -0.347,
+        -16.818,
+        4.716,
+        1.367,
+        -0.82,
+        0.523,
+        0.194,
+        0.108,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.519931230937388
+    },
+    {
+      "version": "v99_tiny_dot_pipeline_20261012",
+      "sha256": "d029178e4bf1c30a0751785162ecdc90869fdb23bd9e92184e755d895ca2a955",
+      "submitted_source_sha256": "d029178e4bf1c30a0751785162ecdc90869fdb23bd9e92184e755d895ca2a955",
+      "submitted_source_hash_match": true,
+      "source_review_hash_match": true,
+      "status": "Pass",
+      "source_review_pass": true,
+      "points": [
+        {
+          "id": 1,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.44,
+          "ref_us": 2.15
+        },
+        {
+          "id": 2,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 5.35,
+          "ref_us": 1.67
+        },
+        {
+          "id": 3,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 8.29,
+          "ref_us": 2.49
+        },
+        {
+          "id": 4,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 19.66,
+          "ref_us": 8.26
+        },
+        {
+          "id": 5,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 20.37,
+          "ref_us": 8.54
+        },
+        {
+          "id": 6,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 34.6,
+          "ref_us": 12.38
+        },
+        {
+          "id": 7,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 48.8,
+          "ref_us": 15.46
+        },
+        {
+          "id": 8,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 116.79,
+          "ref_us": 15.8
+        },
+        {
+          "id": 9,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 58.99,
+          "ref_us": 19.27
+        },
+        {
+          "id": 10,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 119.11,
+          "ref_us": 38.17
+        },
+        {
+          "id": 11,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 232.8,
+          "ref_us": 54.34
+        },
+        {
+          "id": 12,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 295.01,
+          "ref_us": 74.35
+        },
+        {
+          "id": 13,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 391.54,
+          "ref_us": 84.11
+        },
+        {
+          "id": 14,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 773.95,
+          "ref_us": 174.06
+        },
+        {
+          "id": 15,
+          "status": "Pass",
+          "error_pct": 0.0,
+          "us": 1610.0,
+          "ref_us": 348.97
+        }
+      ],
+      "all_pass": true,
+      "times_us": [
+        8.44,
+        5.35,
+        8.29,
+        19.66,
+        20.37,
+        34.6,
+        48.8,
+        116.79,
+        58.99,
+        119.11,
+        232.8,
+        295.01,
+        391.54,
+        773.95,
+        1610.0
+      ],
+      "reference_us": [
+        2.15,
+        1.67,
+        2.49,
+        8.26,
+        8.54,
+        12.38,
+        15.46,
+        15.8,
+        19.27,
+        38.17,
+        54.34,
+        74.35,
+        84.11,
+        174.06,
+        348.97
+      ],
+      "sum_us": 3743.7000000000003,
+      "eligible_for_recommendation": true,
+      "estimated_score_common_T": 24.625721971559702,
+      "estimated_score_own_T": 24.625721971559702,
+      "delta_pct_vs_latest_control": [
+        1.809,
+        14.561,
+        4.672,
+        -1.454,
+        -1.308,
+        -0.717,
+        -0.367,
+        -0.094,
+        -0.64,
+        0.489,
+        0.527,
+        0.177,
+        -0.242,
+        0.482,
+        -0.617
+      ],
+      "estimated_score_delta_vs_latest_control": -0.16929852050320093
+    }
+  ],
+  "common_T": [
+    2.15,
+    1.67,
+    2.49,
+    8.26,
+    8.54,
+    12.38,
+    15.46,
+    15.8,
+    19.27,
+    38.17,
+    54.34,
+    74.35,
+    84.11,
+    174.06,
+    348.97
+  ],
+  "limitation": "统一T估算仅用于本轮横向比较；网页耗时已舍入，第15点ms影响估算。队友并发提交，队伍榜单不能独占归因；无自定义NPU边界测试或profile。"
+}

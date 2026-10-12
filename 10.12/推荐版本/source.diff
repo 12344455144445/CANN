@@ -1,0 +1,76 @@
+--- latest_GitHub_baseline
++++ tested_scale_bank_ODD
+@@ -764,7 +764,6 @@
+     TBuf<TPosition::VECCALC> fp32Buffer;
+     TBuf<TPosition::VECCALC> halfBuffer;
+     TBuf<TPosition::VECCALC> rowMaxBuffer;
+-    TBuf<TPosition::VECCALC> rowScaleBuffer;
+     TBuf<TPosition::VECCALC> reduceBuffer;
+     TBuf<TPosition::VECCALC> scalarMaxBuffer;
+     TBuf<TPosition::VECCALC> correctionMaskBuffer;
+@@ -777,7 +776,6 @@
+     pipe.InitBuffer(fp32Buffer, kPairCapacity * sizeof(float));
+     pipe.InitBuffer(halfBuffer, kPairCapacity * sizeof(float));
+     pipe.InitBuffer(rowMaxBuffer, alignedRows * sizeof(float));
+-    pipe.InitBuffer(rowScaleBuffer, alignedRows * sizeof(float));
+     pipe.InitBuffer(reduceBuffer, kPairCapacity * sizeof(float));
+     pipe.InitBuffer(scalarMaxBuffer, 4U * kFloatBlock * sizeof(float));
+     pipe.InitBuffer(correctionMaskBuffer, kPairCapacity / 8U);
+@@ -791,7 +789,7 @@
+     x1ScaleLocal = x1ScaleQueue.DeQue<float>();
+ 
+     LocalTensor<float> rowMaxLocal = rowMaxBuffer.Get<float>();
+-    LocalTensor<float> rowScaleLocal = rowScaleBuffer.Get<float>();
++    LocalTensor<float> rowScaleLocal = yScaleQueue.AllocTensor<float>();
+     Duplicate(rowMaxLocal, 0.0f, alignedRows);
+     PipeBarrier<PIPE_V>();
+ 
+@@ -884,7 +882,6 @@
+         alignedRows,
+         QmqAlignUp(alignedRows, 64U));
+     // [OPT-V45-B1] AllocTensor 上移（纯顺序变化，内容一字未改）。
+-    LocalTensor<float> yScaleLocal = yScaleQueue.AllocTensor<float>();
+     for (uint32_t row = 0; row < rows; ++row) {
+         if (rowMaxLocal.GetValue(row) <= 0.0f) {
+             rowScaleLocal.SetValue(row, 1.0f);
+@@ -892,15 +889,13 @@
+     }
+     PipeBarrier<PIPE_V>();
+ 
+-    for (uint32_t row = 0; row < rows; ++row) {
+-        yScaleLocal.SetValue(row, rowScaleLocal.GetValue(row));
+-    }
++    // Compute scales directly in the output queue and retain its read-only bank.
++    LocalTensor<float> yScaleLocal = rowScaleLocal;
+     yScaleQueue.EnQue(yScaleLocal);
+     yScaleLocal = yScaleQueue.DeQue<float>();
+     DataCopyExtParams yScaleCopy{
+         1, static_cast<uint32_t>(rows * sizeof(float)), 0, 0, 0};
+     DataCopyPad(yScaleGm[rowStart], yScaleLocal, yScaleCopy);
+-    yScaleQueue.FreeTensor(yScaleLocal);
+ 
+     for (uint32_t nOffset = 0; nOffset < n; nOffset += kVectorTileN) {
+         const uint32_t currentN = QmqMinValue(kVectorTileN, n - nOffset);
+@@ -1020,11 +1015,10 @@
+                 Maxs(fp32Local, fp32Local, 0.0f, pairCount);
+                 Mins(fp32Local, fp32Local, 127.0f, pairCount);
+                 PipeBarrier<PIPE_V>();
+-                Cast(inputLocal, fp32Local, RoundMode::CAST_RINT, pairCount);
+-                PipeBarrier<PIPE_V>();
+-                SetDeqScale(static_cast<half>(1.0f));
++                // Round-to-odd avoids double rounding at integer half ties.
++                // All FP32 values have already been clipped to [0,127].
+                 LocalTensor<half> halfLocal = halfBuffer.Get<half>();
+-                Cast(halfLocal, inputLocal, RoundMode::CAST_NONE, pairCount);
++                Cast(halfLocal, fp32Local, RoundMode::CAST_ODD, pairCount);
+                 PipeBarrier<PIPE_V>();
+                 LocalTensor<int8_t> outputLocal = outputQueue.AllocTensor<int8_t>();
+                 Cast(outputLocal, halfLocal, RoundMode::CAST_RINT, pairCount);
+@@ -1039,6 +1033,7 @@
+         if (!reuseColumnScale) { x2ScaleQueue.FreeTensor(x2ScaleLocal); }
+     }
+ 
++    yScaleQueue.FreeTensor(yScaleLocal);
+     if (reuseColumnScale) { x2ScaleQueue.FreeTensor(retainedColumnScale); }
+     x1ScaleQueue.FreeTensor(x1ScaleLocal);
+     PipeBarrier<PIPE_ALL>();

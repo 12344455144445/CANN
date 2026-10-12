@@ -1,0 +1,24 @@
+{
+  "review_pass": true,
+  "sha256": "fa9d53671ab82f1539db8d69f81c8f882336de2256dc20b18b5aa59d892b7035",
+  "base": "v124_scale_output_bank_20261012",
+  "exact_source_inverse": true,
+  "only_change": "Replace scalar zero-row override with LE comparison, dead-rowMax bank filled with ones and Select mode2, only for256-byte-aligned comparison lengths and rows>=64; retain exact scalar path otherwise.",
+  "CPU_row_counts": 1024,
+  "CPU_vector_dispatch_cases": 121,
+  "CPU_logical_row_values": 524800,
+  "CPU_scope": "IEEE selection model includes signed zero, subnormal, infinity and NaN bit payloads. It does not prove NPU nonfinite comparison behavior.",
+  "CMP_count_byte_alignment": 256,
+  "existing_mask_capacity_bytes": 768,
+  "Select_alias_proof": "dst and src1 are identical for each iteration; consecutive iterations use disjoint elements. No partial or cross-iteration overlap.",
+  "rowMax_bank_last_use_proved": true,
+  "UB_explicit_peak_bytes": 166784,
+  "Select_existing_API_reserve_bytes": 8192,
+  "UB_total_with_API_reserve_bytes": 174976,
+  "source_API": [
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0068.html",
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0070.html",
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0004.html"
+  ],
+  "device": "NOT SUBMITTED; no CANN compile, NPU correctness or performance claim. Automatic device submission held to preserve the10 remaining daily attempts."
+}

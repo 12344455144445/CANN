@@ -1,0 +1,20 @@
+{
+  "repository": "12344455144445/CANN",
+  "number": 5,
+  "url": "https://github.com/12344455144445/CANN/pull/5",
+  "draft": true,
+  "head_ref": "codex/2026-10-12-scale-bank-odd",
+  "head_sha": "11e92726ba7a06d92eae3b1ff232dd8fe97a142d",
+  "base_sha": "5490e62edf8e57037659cc105327a86b57a9c7bc",
+  "files": [
+    {
+      "path": "Carl Memory/推荐版本/code/kernel.asc",
+      "git_blob": "94eabc5bdcc9dff908f682198fa5fc5a40daaf95"
+    }
+  ],
+  "source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "default_main_sha": "5490e62edf8e57037659cc105327a86b57a9c7bc",
+  "default_main_replaced": false,
+  "automatic_review_rejected_main_replacement": true,
+  "alternative": "Independent branch and draft PR; do not merge without authorization."
+}

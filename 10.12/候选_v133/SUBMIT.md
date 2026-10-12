@@ -1,0 +1,1 @@
+独立向量化候选，尚未提交：仅在 rows>=64 且 alignedRows 为64倍数时，将零行尺度覆盖转为 Compares(LE)+Duplicate+Select。复用已经结束生命周期的 rowMaxBuffer，不新增分配。比较count严格满足256B约束，保留所有其他长度的原标量逻辑。Select原有8KB临时预留已纳入，总资源174976B。CPU检查不代表NPU验证或性能提升；当天已用40次，保留10次。

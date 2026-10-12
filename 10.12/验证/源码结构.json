@@ -1,0 +1,8 @@
+{
+  "source_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "git_blob": "94eabc5bdcc9dff908f682198fa5fc5a40daaf95",
+  "outside_vector_function_byte_identical": true,
+  "queue_lifetime_order_pass": true,
+  "submitted_four_times": true,
+  "limitation": "Structural checks supplement the four independent device executions; they do not emulate NPU synchronization."
+}
