@@ -1,0 +1,18 @@
+--- v124/kernel.asc
++++ v136_cube_original_shape_hoist_20261013/kernel.asc
+@@ -664,6 +664,7 @@
+     TPipe pipe;
+     matmul::Matmul<AType, BType, CType, BiasType, kInt8MatmulConfig> matmulObj;
+     REGIST_MATMUL_OBJ(&pipe, GetSysWorkSpacePtr(), matmulObj, &tiling);
++    matmulObj.SetOrgShape(m, n, k, k);
+ 
+     // [OPT-V17C] 循环上界由 2 改为 mBlocksPerGroup。
+     // mBlock 总数 <= 可用核数时 mBlocksPerGroup==1，每个 AIC group 只串行做
+@@ -685,7 +686,6 @@
+         const uint64_t aOffset = static_cast<uint64_t>(mOffset) * k;
+         const uint64_t cOffset = static_cast<uint64_t>(mOffset) * n;
+ 
+-        matmulObj.SetOrgShape(m, n, k, k);
+         matmulObj.SetTail(static_cast<int32_t>(currentM), static_cast<int32_t>(n));
+         matmulObj.SetTensorA(x1Gm[aOffset], false);
+         matmulObj.SetTensorB(x2Gm[0], true);

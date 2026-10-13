@@ -1,0 +1,247 @@
+--- v124
++++ v138_resident_row_blocks_20261013
+@@ -712,6 +712,231 @@
+     queue.EnQue(input);
+ }
+ 
++
++// V138: complete rows are consumed exactly once in capacity-derived UB blocks.
++// Called before the fallback TPipe exists; the two branches never allocate together.
++__aicore__ inline void QmqResidentRowBlocks(
++    GM_ADDR workspace, GM_ADDR x1Scale, GM_ADDR x2Scale, GM_ADDR y, GM_ADDR yScale,
++    uint32_t m, uint32_t n, uint32_t rowStart, uint32_t rows)
++{
++    constexpr uint32_t kResidentCapacity = 8192U;
++    const uint32_t rowBatchLimit = QmqMinValue(rows, kResidentCapacity / n);
++    const uint32_t tensorCapacity = QmqAlignUp(rowBatchLimit * n, 64U);
++    const uint32_t scaleCapacity = QmqAlignUp(rowBatchLimit, 64U);
++    const uint32_t maskCapacity = QmqAlignUp(tensorCapacity / 8U, 32U);
++    const uint32_t alignedN = n;
++    float residentRowScale[256]; // N>=32 and capacity<=8192 imply batchRows<=256.
++
++    GlobalTensor<int32_t> workspaceGm;
++    GlobalTensor<float> x1ScaleGm, x2ScaleGm, yScaleGm;
++    GlobalTensor<int8_t> yGm;
++    workspaceGm.SetGlobalBuffer(reinterpret_cast<__gm__ int32_t*>(workspace),
++        static_cast<uint64_t>(m) * n);
++    x1ScaleGm.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(x1Scale), m);
++    x2ScaleGm.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(x2Scale), n);
++    yGm.SetGlobalBuffer(reinterpret_cast<__gm__ int8_t*>(y), static_cast<uint64_t>(m) * n);
++    yScaleGm.SetGlobalBuffer(reinterpret_cast<__gm__ float*>(yScale), m);
++
++    TPipe pipe;
++    TQue<QuePosition::VECIN, 1> workspaceQueue;
++    TQue<QuePosition::VECIN, 1> x2ScaleQueue;
++    TQue<QuePosition::VECIN, 1> x1ScaleQueue;
++    TQue<QuePosition::VECOUT, 1> outputQueue;
++    TQue<QuePosition::VECOUT, 1> yScaleQueue;
++    TBuf<TPosition::VECCALC> fp32Buffer;
++    TBuf<TPosition::VECCALC> halfBuffer;
++    TBuf<TPosition::VECCALC> rowMaxBuffer;
++    TBuf<TPosition::VECCALC> reduceBuffer;
++    TBuf<TPosition::VECCALC> scalarMaxBuffer;
++    TBuf<TPosition::VECCALC> correctionMaskBuffer;
++    pipe.InitBuffer(workspaceQueue, 1, tensorCapacity * sizeof(int32_t));
++    pipe.InitBuffer(x2ScaleQueue, 1, n * sizeof(float));
++    pipe.InitBuffer(x1ScaleQueue, 1, scaleCapacity * sizeof(float));
++    pipe.InitBuffer(outputQueue, 1, tensorCapacity * sizeof(int8_t));
++    pipe.InitBuffer(yScaleQueue, 1, scaleCapacity * sizeof(float));
++    pipe.InitBuffer(fp32Buffer, tensorCapacity * sizeof(float));
++    pipe.InitBuffer(halfBuffer, tensorCapacity * sizeof(float));
++    pipe.InitBuffer(rowMaxBuffer, scaleCapacity * sizeof(float));
++    pipe.InitBuffer(reduceBuffer, tensorCapacity * sizeof(float));
++    pipe.InitBuffer(scalarMaxBuffer, 4U * kFloatBlock * sizeof(float));
++    pipe.InitBuffer(correctionMaskBuffer, maskCapacity);
++
++    LocalTensor<float> x2ScaleLocal = x2ScaleQueue.AllocTensor<float>();
++    DataCopyExtParams x2ScaleCopy{1, static_cast<uint32_t>(n * sizeof(float)), 0, 0, 0};
++    DataCopyPadExtParams<float> noFloatPad{true, 0, 0, 0.0f};
++    DataCopyPad(x2ScaleLocal, x2ScaleGm, x2ScaleCopy, noFloatPad);
++    x2ScaleQueue.EnQue(x2ScaleLocal);
++    x2ScaleLocal = x2ScaleQueue.DeQue<float>();
++
++    for (uint32_t blockRow = 0; blockRow < rows; blockRow += rowBatchLimit) {
++        const uint32_t batchRows = QmqMinValue(rowBatchLimit, rows - blockRow);
++        const uint32_t alignedRows = QmqAlignUp(batchRows, 8U);
++        const uint32_t scaleCompareCount = QmqAlignUp(batchRows, 64U);
++        const uint32_t residentCount = batchRows * n;
++        const uint32_t residentCompareCount = QmqAlignUp(residentCount, 64U);
++        const uint64_t offset = static_cast<uint64_t>(rowStart + blockRow) * n;
++
++        LocalTensor<float> x1ScaleLocal = x1ScaleQueue.AllocTensor<float>();
++        DataCopyExtParams x1ScaleCopy{1, static_cast<uint32_t>(batchRows * sizeof(float)), 0, 0, 0};
++        DataCopyPadExtParams<float> x1ScalePad{
++            true, 0, static_cast<uint8_t>(alignedRows - batchRows), 0.0f};
++        DataCopyPad(x1ScaleLocal, x1ScaleGm[rowStart + blockRow], x1ScaleCopy, x1ScalePad);
++        x1ScaleQueue.EnQue(x1ScaleLocal);
++        x1ScaleLocal = x1ScaleQueue.DeQue<float>();
++
++        LocalTensor<int32_t> inputLocal = workspaceQueue.AllocTensor<int32_t>();
++        DataCopyExtParams inputCopy{1, static_cast<uint32_t>(residentCount * sizeof(int32_t)), 0, 0, 0};
++        DataCopyPadExtParams<int32_t> noIntPad{true, 0, 0, 0};
++        DataCopyPad(inputLocal, workspaceGm[offset], inputCopy, noIntPad);
++        workspaceQueue.EnQue(inputLocal);
++        inputLocal = workspaceQueue.DeQue<int32_t>();
++
++        LocalTensor<float> fp32Local = fp32Buffer.Get<float>();
++        Cast(fp32Local, inputLocal, RoundMode::CAST_RINT, residentCount);
++        PipeBarrier<PIPE_V>();
++        for (uint32_t r = 0; r < batchRows; ++r) {
++            Muls(fp32Local[r * alignedN], fp32Local[r * alignedN],
++                x1ScaleLocal.GetValue(r), alignedN);
++        }
++        PipeBarrier<PIPE_V>();
++        for (uint32_t r = 0; r < batchRows; ++r) {
++            Mul(fp32Local[r * alignedN], fp32Local[r * alignedN], x2ScaleLocal, alignedN);
++        }
++        PipeBarrier<PIPE_V>();
++
++        LocalTensor<float> rowMaxLocal = rowMaxBuffer.Get<float>();
++        LocalTensor<float> scalarMaxLocal = scalarMaxBuffer.Get<float>();
++        Duplicate(rowMaxLocal, 0.0f, scaleCapacity);
++        PipeBarrier<PIPE_V>();
++        for (uint32_t group = 0; group < batchRows; group += 4U) {
++            const uint32_t groupRows = QmqMinValue(4U, batchRows - group);
++            for (uint32_t r = 0; r < groupRows; ++r) {
++                const uint32_t actualRow = group + r;
++                ReduceMax(scalarMaxLocal[r * kFloatBlock], fp32Local[actualRow * alignedN],
++                    reduceBuffer.Get<float>()[actualRow * alignedN], alignedN);
++            }
++            PipeBarrier<PIPE_V>();
++            for (uint32_t r = 0; r < groupRows; ++r) {
++                const float maximum = scalarMaxLocal.GetValue(r * kFloatBlock);
++                if (maximum > 0.0f) {
++                    rowMaxLocal.SetValue(group + r, maximum);
++                }
++            }
++        }
++
++        // All INT32 readers have completed. Reuse that bank for scale scratch,
++        // then quotient; the FP32 activation bank remains unmodified and separate.
++        LocalTensor<float> scaleScratchLocal = inputLocal.ReinterpretCast<float>();
++        LocalTensor<float> scaleResidualLocal = reduceBuffer.Get<float>();
++        LocalTensor<float> scaleDivisorLocal = halfBuffer.Get<float>();
++        LocalTensor<uint8_t> scaleMaskLocal = correctionMaskBuffer.Get<uint8_t>();
++        LocalTensor<float> rowScaleLocal = yScaleQueue.AllocTensor<float>();
++        Duplicate(scaleScratchLocal, 0.0f, scaleCompareCount);
++        Duplicate(scaleResidualLocal, 0.0f, scaleCompareCount);
++        Duplicate(scaleDivisorLocal, 127.0f, alignedRows);
++        PipeBarrier<PIPE_V>();
++        QmqCorrectDiv(rowScaleLocal, rowMaxLocal, scaleDivisorLocal,
++            scaleResidualLocal, scaleScratchLocal, scaleMaskLocal,
++            alignedRows, scaleCompareCount);
++        for (uint32_t r = 0; r < batchRows; ++r) {
++            if (rowMaxLocal.GetValue(r) <= 0.0f) {
++                rowScaleLocal.SetValue(r, 1.0f);
++            }
++        }
++        PipeBarrier<PIPE_V>();
++        for (uint32_t r = 0; r < batchRows; ++r) {
++            residentRowScale[r] = rowScaleLocal.GetValue(r);
++        }
++        LocalTensor<float> yScaleLocal = rowScaleLocal;
++        yScaleQueue.EnQue(yScaleLocal);
++        yScaleLocal = yScaleQueue.DeQue<float>();
++        DataCopyExtParams yScaleCopy{1, static_cast<uint32_t>(batchRows * sizeof(float)), 0, 0, 0};
++        DataCopyPad(yScaleGm[rowStart + blockRow], yScaleLocal, yScaleCopy);
++
++        Maxs(fp32Local, fp32Local, 0.0f, residentCount);
++        PipeBarrier<PIPE_V>();
++        LocalTensor<float> activationLocal = fp32Local;
++        fp32Local = inputLocal.ReinterpretCast<float>();
++        LocalTensor<float> divisorLocal = halfBuffer.Get<float>();
++        LocalTensor<float> residualLocal = reduceBuffer.Get<float>();
++        LocalTensor<float> scratchLocal = halfBuffer.Get<float>();
++        LocalTensor<uint8_t> correctionMaskLocal = correctionMaskBuffer.Get<uint8_t>();
++        for (uint32_t r = 0; r < batchRows; ++r) {
++            Duplicate(divisorLocal[r * alignedN], residentRowScale[r], alignedN);
++        }
++        PipeBarrier<PIPE_V>();
++        QmqDiv(fp32Local, activationLocal, divisorLocal, residentCount);
++        PipeBarrier<PIPE_V>();
++        LocalTensor<int32_t> floorLocal = scratchLocal.ReinterpretCast<int32_t>();
++        Cast(floorLocal, fp32Local, RoundMode::CAST_FLOOR, residentCount);
++        PipeBarrier<PIPE_V>();
++        Cast(residualLocal, floorLocal, RoundMode::CAST_NONE, residentCount);
++        PipeBarrier<PIPE_V>();
++        Adds(residualLocal, residualLocal, 0.5f, residentCount);
++        PipeBarrier<PIPE_V>();
++        Sub(residualLocal, fp32Local, residualLocal, residentCount);
++        PipeBarrier<PIPE_V>();
++        Abs(residualLocal, residualLocal, residentCount);
++        PipeBarrier<PIPE_V>();
++        bool hasNearHalf = true;
++        if (n >= 2048U) {
++            LocalTensor<float> scalarMinLocal = scalarMaxBuffer.Get<float>();
++            ReduceMin(scalarMinLocal, residualLocal, scratchLocal, residentCount);
++            PipeBarrier<PIPE_V>();
++            hasNearHalf = !(scalarMinLocal.GetValue(0) >= kHalfScreenTolerance);
++        }
++        if (hasNearHalf) {
++            if (residentCompareCount > residentCount) {
++                Duplicate(residualLocal[residentCount], 0.0f,
++                    residentCompareCount - residentCount);
++                PipeBarrier<PIPE_V>();
++            }
++            Compares(correctionMaskLocal, residualLocal, kHalfScreenTolerance,
++                     CMPMODE::LT, residentCompareCount);
++            PipeBarrier<PIPE_V>();
++            LocalTensor<uint64_t> candidateMask = correctionMaskLocal.ReinterpretCast<uint64_t>();
++            for (uint32_t maskGroup = 0; maskGroup < residentCompareCount / 64U; ++maskGroup) {
++                uint64_t bits = candidateMask.GetValue(maskGroup);
++                while (bits != 0U) {
++                    const uint32_t bit = static_cast<uint32_t>(AscendC::GetSFFValue<1>(bits));
++                    const uint32_t lane = maskGroup * 64U + bit;
++                    if (lane < residentCount && lane % alignedN < n) {
++                        const uint32_t r = lane / alignedN;
++                        const int32_t quantized = QmqQuantizeNearHalf(
++                            activationLocal.GetValue(lane), residentRowScale[r],
++                            fp32Local.GetValue(lane));
++                        if (quantized >= 0) {
++                            fp32Local.SetValue(lane, static_cast<float>(quantized));
++                        }
++                    }
++                    bits &= bits - 1U;
++                }
++            }
++        }
++        PipeBarrier<PIPE_V>();
++        Maxs(fp32Local, fp32Local, 0.0f, residentCount);
++        Mins(fp32Local, fp32Local, 127.0f, residentCount);
++        PipeBarrier<PIPE_V>();
++        // Round-to-odd avoids double rounding at integer half ties.
++        // All FP32 values have already been clipped to [0,127].
++        LocalTensor<half> halfLocal = halfBuffer.Get<half>();
++        Cast(halfLocal, fp32Local, RoundMode::CAST_ODD, residentCount);
++        PipeBarrier<PIPE_V>();
++        LocalTensor<int8_t> outputLocal = outputQueue.AllocTensor<int8_t>();
++        Cast(outputLocal, halfLocal, RoundMode::CAST_RINT, residentCount);
++        outputQueue.EnQue(outputLocal);
++        outputLocal = outputQueue.DeQue<int8_t>();
++        DataCopyExtParams outputCopy{1, residentCount, 0, 0, 0};
++        DataCopyPad(yGm[offset], outputLocal, outputCopy);
++        outputQueue.FreeTensor(outputLocal);
++        workspaceQueue.FreeTensor(inputLocal);
++        yScaleQueue.FreeTensor(yScaleLocal);
++        x1ScaleQueue.FreeTensor(x1ScaleLocal);
++    }
++    x2ScaleQueue.FreeTensor(x2ScaleLocal);
++    PipeBarrier<PIPE_ALL>();
++}
++
+ __aicore__ inline void quant_matmul_relu_quant_vector(
+     GM_ADDR workspace,
+     GM_ADDR x1Scale,
+@@ -730,6 +955,12 @@
+ 
+     rows = QmqMinValue(rows, m - rowStart);
+     if (rows == 0) {
++        return;
++    }
++    // The original fallback owns no UB yet: exactly one TPipe branch runs.
++    if (n >= 32U && n <= 8192U && n % 32U == 0U) {
++        QmqResidentRowBlocks(workspace, x1Scale, x2Scale, y, yScale,
++            m, n, rowStart, rows);
+         return;
+     }
+     const uint32_t alignedRows = QmqAlignUp(rows, kFloatBlock);

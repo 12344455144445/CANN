@@ -1,0 +1,59 @@
+{
+  "automatic_submission_enabled": false,
+  "platform_limit_verified": false,
+  "limit_assumption": {
+    "source": "Historical working policy: 50/day, reserve 10. Current submit page has not explicitly confirmed the limit; first pilot is capped at four own submissions.",
+    "date": "SET_CURRENT_SHANGHAI_DATE",
+    "pilot_started_at": "SET_CURRENT_SHANGHAI_START_ISO_TIMESTAMP",
+    "pilot_cap": 4
+  },
+  "daily_limit": 50,
+  "reserve": 10,
+  "spacing_seconds": 180,
+  "history_max_age_seconds": 60,
+  "expected_points": 15,
+  "candidate_roots": [
+    ".."
+  ],
+  "required_review_checks": [],
+  "known_quarantine": [
+    "v94_latest_padded_20261012",
+    "v96_smallN_batch8_20261012",
+    "v110_partition_activation_cache_20261012",
+    "v123_cube_iterate_all_20261012"
+  ],
+  "browser_hwnd": 0,
+  "browser_title_contains": "Edge",
+  "ui_layout_verified": false,
+  "submit_url": "https://cannjudge.cn/public/op_challenge_hangxia_prelim/quantmatmulreluquant/submit",
+  "history_url_template": "https://cannjudge.cn/me/submissions?order=desc&strict=1&page={page}&size=20",
+  "history_page_size": 20,
+  "max_history_pages": 50,
+  "history_ready_text": "提交时间",
+  "kernel_tab_name": "kernel.asc",
+  "submit_button_names": [
+    "提交代码"
+  ],
+  "history_focus": [
+    100,
+    200
+  ],
+  "editor_focus": [
+    1300,
+    490
+  ],
+  "result_focus": [
+    600,
+    225
+  ],
+  "result_poll_seconds": 15,
+  "result_timeout_seconds": 900,
+  "quarantine_sha256": [
+    "0a2afb46a816ccdc173b88b2557f4eb1486ba859baeca0d6b0641302bd31eaf9",
+    "594cf4734025b5fbeb8dbf0f90b7e36afec57524baea1c4fa9c89500f49d4b94",
+    "13a2526825507c6c68f7cd2460b0580826722aadcafb6beaf011556682a6ba6b",
+    "f2451267b08b092b5bf6ddf48c41078cad9cd463fc5bd09e0b686213ce713809"
+  ],
+  "competition_submissions_stopped_by_user": true,
+  "stopped_reason": "User stopped automated evaluations on 2026-10-13; fresh authorization is required."
+}

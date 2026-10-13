@@ -1,0 +1,22 @@
+{
+  "review_pass": true,
+  "sha256": "0b9fc454dc7be294548aefa11ddc18e36cfbec4d40e064bf16c70a250ebce2d5",
+  "base": "v124_scale_output_bank_20261012",
+  "base_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "only_change": "将不变的 SetOrgShape(m,n,k,k)从最多两个 localTile 的循环内移到 Matmul 注册之后；SetTail、Tensor A/B地址、IterateAll、旗及原 BType 全部不变。",
+  "exact_source_inverse": true,
+  "precision_general_vector_tiny_host_flags_byte_identical_except_described_change": true,
+  "new_UB_or_GM_allocations": false,
+  "additional_kernel_launches": 0,
+  "unchanged_M_ownership_proxy_cases": 57344,
+  "B_physical_NK_matmul_layout_CPU_cases": 100,
+  "CPU_layout_error": 0,
+  "official_CANN9_sources": [
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0651.html"
+  ],
+  "hardware_validation": "PENDING: compile, 15/15 zero-error, and timing remain required",
+  "expected_API_call_count_before": "mBlocksPerGroup (1 or 2)",
+  "expected_API_call_count_after": 1,
+  "shape_lifetime": "m,n,k remain constant across all localTile iterations; only currentM changes via SetTail.",
+  "performance_hypothesis": "Only eliminates duplicate runtime original-shape setup for two-tile groups."
+}

@@ -1,0 +1,25 @@
+{
+  "baseline_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "historical_common_reference_score": 25.256099830660826,
+  "uniform_speedup_needed_for_estimated_50": 2.117101940266163,
+  "score_uniform_1_5x": 34.26374914332158,
+  "score_uniform_2x": 46.38556198362665,
+  "point_ratios": [
+    3.8465116279069766,
+    2.802395209580838,
+    3.2369477911646585,
+    2.2336561743341403,
+    2.300936768149883,
+    2.7205169628432952,
+    3.0472186287192753,
+    7.177215189873418,
+    2.9128178515827714,
+    3.0610427036940004,
+    4.20610967979389,
+    3.849361129791527,
+    4.660563547735109,
+    4.3129380673331035,
+    4.527609823193971
+  ],
+  "limitation": "Historical displayed references and rounded times; uniform factor is a target model, not a performance prediction or live official score."
+}

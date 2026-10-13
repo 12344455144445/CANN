@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-13",
+  "automatic_submission_enabled": false,
+  "competition_submissions_stopped_by_user": true,
+  "new_framework_device_runs": 0,
+  "unchanged_v124_control_runs": 1,
+  "unchanged_v124_control_points_passed": 15,
+  "v138_submission_blocked_before_process_creation": true,
+  "target_score": 50,
+  "target_achieved": false,
+  "default_recommended_source_replaced": false
+}

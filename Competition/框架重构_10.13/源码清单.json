@@ -1,0 +1,30 @@
+{
+  "v124_scale_output_bank_20261012": {
+    "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+    "device_status": "15/15 unchanged baseline"
+  },
+  "v134_row_resident_20261013": {
+    "sha256": "cfb39be0e9a4978cf2cd387f9218919d7faa9d6159a057fa2d527e270d39a911",
+    "device_status": "PENDING: uncompiled and unsubmitted"
+  },
+  "v135_cube_B_transpose_consistency_20261013": {
+    "sha256": "08a19977e0a8521baa579b2c5b5f934e5b0a0fb820b1ad74611b8c6a05820963",
+    "device_status": "PENDING: uncompiled and unsubmitted"
+  },
+  "v136_cube_original_shape_hoist_20261013": {
+    "sha256": "0b9fc454dc7be294548aefa11ddc18e36cfbec4d40e064bf16c70a250ebce2d5",
+    "device_status": "PENDING: uncompiled and unsubmitted"
+  },
+  "v138_resident_row_blocks_20261013": {
+    "sha256": "abfb2399da1708cb9ae74752180ef4f9940face5c5a30224489ead62dcb9702e",
+    "device_status": "PENDING: uncompiled and unsubmitted"
+  },
+  "v139_partition_fused_barrier_20261013": {
+    "sha256": "255569b02768f4af42c7c332c33749753635c9d1191505cbaeed6b324f622d3b",
+    "device_status": "PENDING: uncompiled and unsubmitted"
+  },
+  "v137_v124_control_20261013": {
+    "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+    "device_status": "15/15 unchanged baseline"
+  }
+}

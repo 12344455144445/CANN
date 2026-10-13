@@ -1,0 +1,151 @@
+{
+  "version": "v137_v124_control_20261013",
+  "status": "Pass",
+  "all_pass": true,
+  "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "source_review_pass": true,
+  "submitted_source_hash_match": true,
+  "points": [
+    {
+      "id": 1,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 9.28,
+      "ref_us": 2.15
+    },
+    {
+      "id": 2,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 4.72,
+      "ref_us": 1.67
+    },
+    {
+      "id": 3,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 8.16,
+      "ref_us": 2.49
+    },
+    {
+      "id": 4,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 19.05,
+      "ref_us": 8.26
+    },
+    {
+      "id": 5,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 19.89,
+      "ref_us": 8.54
+    },
+    {
+      "id": 6,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 34.16,
+      "ref_us": 12.38
+    },
+    {
+      "id": 7,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 48.64,
+      "ref_us": 15.46
+    },
+    {
+      "id": 8,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 114.28,
+      "ref_us": 15.8
+    },
+    {
+      "id": 9,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 57.67,
+      "ref_us": 19.27
+    },
+    {
+      "id": 10,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 117.47,
+      "ref_us": 38.17
+    },
+    {
+      "id": 11,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 228.16,
+      "ref_us": 54.34
+    },
+    {
+      "id": 12,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 286.09,
+      "ref_us": 74.35
+    },
+    {
+      "id": 13,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 389.75,
+      "ref_us": 83.49
+    },
+    {
+      "id": 14,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 753.25,
+      "ref_us": 174.06
+    },
+    {
+      "id": 15,
+      "status": "Pass",
+      "error_pct": 0.0,
+      "us": 1570.0,
+      "ref_us": 348.97
+    }
+  ],
+  "terminal": true,
+  "times_us": [
+    9.28,
+    4.72,
+    8.16,
+    19.05,
+    19.89,
+    34.16,
+    48.64,
+    114.28,
+    57.67,
+    117.47,
+    228.16,
+    286.09,
+    389.75,
+    753.25,
+    1570.0
+  ],
+  "reference_us": [
+    2.15,
+    1.67,
+    2.49,
+    8.26,
+    8.54,
+    12.38,
+    15.46,
+    15.8,
+    19.27,
+    38.17,
+    54.34,
+    74.35,
+    83.49,
+    174.06,
+    348.97
+  ],
+  "scope": "Only unchanged v124 was evaluated; all framework candidates remain uncompiled and unsubmitted."
+}

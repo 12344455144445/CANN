@@ -1,0 +1,9 @@
+{
+  "review_pass": true,
+  "sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "base": "v124_scale_output_bank_20261012",
+  "only_change": "None, exact-source new-day control",
+  "static_checks_inherited_from_verified_base": true,
+  "UB_peak_bytes_including_API_reserve": 174976,
+  "device": "Historical exact-source 4 x 15/15; new-day control NOT SUBMITTED"
+}

@@ -1,0 +1,11 @@
+--- v124/kernel.asc
++++ v135_cube_B_transpose_consistency_20261013/kernel.asc
+@@ -609,7 +609,7 @@
+     uint32_t mBlocksPerGroup)
+ {
+     using AType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int8_t, false>;
+-    using BType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int8_t>;
++    using BType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int8_t, true>;
+     using CType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int32_t>;
+     using BiasType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int32_t>;
+ 

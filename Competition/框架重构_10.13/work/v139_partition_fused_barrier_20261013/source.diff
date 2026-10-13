@@ -1,0 +1,145 @@
+--- v124/kernel.asc
++++ v139/kernel.asc
+@@ -1422,6 +1422,68 @@
+     }
+ }
+ 
++
++// [V139] One physical launch: each AIC computes an independent M/N tile.
++// All launched AICs and AIVs reach the same mixed hardware barrier once.
++// Only after COMPLETE C exists, AIVs own full rows for the original math.
++__schedmode__(1) __global__ __mix__(1, 2) void qmq_partition_fused_entry(
++    GM_ADDR x1, GM_ADDR x2, GM_ADDR workspace,
++    __kfc_workspace__ __gm__ uint8_t* systemWorkspace,
++    GM_ADDR x1Scale, GM_ADDR x2Scale, GM_ADDR y, GM_ADDR yScale,
++    uint32_t m, uint32_t n, uint32_t k,
++    AscendC::tiling::TCubeTiling tiling,
++    uint32_t rowGroups, uint32_t columnGroups,
++    uint32_t columnWidth, uint32_t blockRows)
++{
++    AscendC::InitSocState();
++    if ASCEND_IS_AIC {
++        AscendC::SetSysWorkspace(systemWorkspace);
++        const uint32_t core = GetBlockIdx();
++        const uint32_t rowGroup = core / columnGroups;
++        const uint32_t columnGroup = core % columnGroups;
++        const uint32_t rowOffset = rowGroup * blockRows;
++        const uint32_t columnOffset = columnGroup * columnWidth;
++        const uint32_t currentM = QmqMinValue(blockRows, m - rowOffset);
++        const uint32_t currentN = QmqMinValue(columnWidth, n - columnOffset);
++        using AType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int8_t, false>;
++        using BType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int8_t, true>;
++        using CType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int32_t>;
++        using BiasType = matmul::MatmulType<TPosition::GM, CubeFormat::ND, int32_t>;
++        GlobalTensor<int8_t> aGm, bGm;
++        GlobalTensor<int32_t> cGm;
++        aGm.SetGlobalBuffer(reinterpret_cast<__gm__ int8_t*>(x1), static_cast<uint64_t>(m) * k);
++        bGm.SetGlobalBuffer(reinterpret_cast<__gm__ int8_t*>(x2), static_cast<uint64_t>(n) * k);
++        cGm.SetGlobalBuffer(reinterpret_cast<__gm__ int32_t*>(workspace), static_cast<uint64_t>(m) * n);
++        TPipe pipe;
++        matmul::Matmul<AType, BType, CType, BiasType, kInt8MatmulConfig> mm;
++        REGIST_MATMUL_OBJ(&pipe, GetSysWorkSpacePtr(), mm, &tiling);
++        // Full N is the output C row stride. Physical B is [N,K].
++        mm.SetOrgShape(m, n, k, k, n);
++        mm.SetTail(static_cast<int32_t>(currentM), static_cast<int32_t>(currentN));
++        mm.SetTensorA(aGm[static_cast<uint64_t>(rowOffset) * k], false);
++        mm.SetTensorB(bGm[static_cast<uint64_t>(columnOffset) * k], true);
++        mm.IterateAll(cGm[static_cast<uint64_t>(rowOffset) * n + columnOffset]);
++        mm.End();
++    }
++    // No return/continue can bypass this barrier, including empty AIV owners.
++    // false synchronizes AIC AND AIV in this __mix__(1,2) entry.
++    AscendC::SyncAll<false>();
++    if ASCEND_IS_AIV {
++        const uint32_t aiv = GetBlockIdx();
++        const uint32_t vectorCores = 2U * rowGroups * columnGroups;
++        const uint32_t rowStart = static_cast<uint32_t>(
++            static_cast<uint64_t>(m) * aiv / vectorCores);
++        const uint32_t rowEnd = static_cast<uint32_t>(
++            static_cast<uint64_t>(m) * (aiv + 1U) / vectorCores);
++        if (rowStart < rowEnd) {
++            // The full row, not a column fragment, defines yScale.
++            quant_matmul_relu_quant_vector(
++                workspace, x1Scale, x2Scale, y, yScale,
++                m, n, rowStart, rowEnd - rowStart);
++        }
++    }
++}
++
+ // ============================================================================
+ // [PATCH-H1] workspace 静态缓存
+ //
+@@ -1565,6 +1627,73 @@
+     const uint32_t k = static_cast<uint32_t>(k64);
+     const uint32_t usableCoreNum = static_cast<uint32_t>(std::min<int64_t>(
+         availableCoreNum, static_cast<int64_t>(UINT32_MAX)));
++    // [V139] Match wider complete M tiles with parallel N slices on small M.
++    // Regular ND strides are deliberately gated; all other shapes keep v124.
++    if (m <= 384U && n >= 1024U && n % 32U == 0U &&
++        k >= 256U && k % 32U == 0U &&
++        static_cast<uint64_t>(n) * k >= 1ULL * 1024ULL * 1024ULL) {
++        const uint32_t physicalAic = platform->GetCoreNumAic();
++        const uint32_t physicalAiv = platform->GetCoreNumAiv();
++        const uint32_t gridBudget = std::min<uint32_t>(
++            usableCoreNum, std::min<uint32_t>(physicalAic, physicalAiv / 2U));
++        const uint32_t blockRows = m <= 192U ? 16U : 32U;
++        const uint32_t rowGroups = QmqHostCeilDiv(m, blockRows);
++        const uint32_t requestedColumns = std::min<uint32_t>(
++            gridBudget / rowGroups, n / 128U);
++        if (requestedColumns >= 2U) {
++            const uint32_t columnWidth = QmqHostCeilDiv(
++                QmqHostCeilDiv(n, requestedColumns), 128U) * 128U;
++            const uint32_t columnGroups = QmqHostCeilDiv(n, columnWidth);
++            const uint32_t gridCores = rowGroups * columnGroups;
++            const uint32_t oldRowGroups = QmqHostCeilDiv(m, 16U);
++            const bool usefulGrid = m <= 192U ||
++                gridCores >= oldRowGroups + QmqHostCeilDiv(oldRowGroups, 4U);
++            matmul_tiling::MultiCoreMatmulTiling partApi(*platform);
++            if (columnGroups >= 2U && usefulGrid && gridCores <= gridBudget &&
++                partApi.SetDim(1) != -1) {
++                partApi.SetAType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND,
++                    matmul_tiling::DataType::DT_INT8, false);
++                partApi.SetBType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND,
++                    matmul_tiling::DataType::DT_INT8, true);
++                partApi.SetCType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND,
++                    matmul_tiling::DataType::DT_INT32);
++                partApi.SetBiasType(matmul_tiling::TPosition::GM, matmul_tiling::CubeFormat::ND,
++                    matmul_tiling::DataType::DT_INT32);
++                partApi.SetOrgShape(static_cast<int32_t>(m), static_cast<int32_t>(n), static_cast<int32_t>(k));
++                partApi.SetShape(static_cast<int32_t>(blockRows), static_cast<int32_t>(columnWidth), static_cast<int32_t>(k));
++                partApi.EnableMultiCoreSplitK(false);
++                partApi.SetTraverse(matmul_tiling::MatrixTraverse::FIRSTM);
++                partApi.EnableBias(false);
++                partApi.SetBufferSpace(-1, -1, -1);
++                if (columnWidth >= 512U && partApi.SetFixSplit(-1, 512, -1) == -1) {
++                    partApi.SetFixSplit(-1, -1, -1);
++                }
++                AscendC::tiling::TCubeTiling partTiling;
++                if (partApi.GetTiling(partTiling) != -1 && partTiling.usedCoreNum != 0 &&
++                    partTiling.M != 0 && partTiling.N != 0 &&
++                    partTiling.Ka != 0 && partTiling.Kb != 0 &&
++                    partTiling.singleCoreM == blockRows &&
++                    partTiling.singleCoreN == columnWidth) {
++                    const uint64_t partElements = static_cast<uint64_t>(m) * n;
++                    if (partElements <= SIZE_MAX / sizeof(int32_t)) {
++                        uint8_t* partResult = nullptr;
++                        uint8_t* partSystem = nullptr;
++                        const size_t partSystemSize = std::max<size_t>(
++                            static_cast<size_t>(platform->GetLibApiWorkSpaceSize()), 1U);
++                        if (QmqAcquireWorkspace(static_cast<size_t>(partElements * sizeof(int32_t)),
++                            partSystemSize, partResult, partSystem)) {
++                            qmq_partition_fused_entry<<<gridCores, 0, stream>>>(
++                                x1, x2, partResult, partSystem, x1Scale, x2Scale, y, yScale,
++                                m, n, k, partTiling, rowGroups, columnGroups, columnWidth, blockRows);
++                            (void)aclrtSynchronizeStream(stream);
++                            return;
++                        }
++                    }
++                }
++            }
++        }
++    }
++
+     const uint32_t aivCandidate = static_cast<uint32_t>(std::min<uint64_t>(
+         m, 2ULL * static_cast<uint64_t>(usableCoreNum)));
+     const uint32_t balancedTileM = QmqHostCeilDiv(m, aivCandidate);

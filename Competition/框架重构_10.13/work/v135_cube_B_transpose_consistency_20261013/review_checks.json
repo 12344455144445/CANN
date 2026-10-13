@@ -1,0 +1,20 @@
+{
+  "review_pass": true,
+  "sha256": "08a19977e0a8521baa579b2c5b5f934e5b0a0fb820b1ad74611b8c6a05820963",
+  "base": "v124_scale_output_bank_20261012",
+  "base_sha256": "4010bfbbb0f4d1be969556db956cebad2de65b7784bb5a9da55b57ea25338574",
+  "only_change": "显式开启 BType 的 ISTRANS=true，使 INT8 B[N,K] 的模板、host SetBType(true)及 kernel SetTensorB(true)一致。只改一个 MatmulType 声明。",
+  "exact_source_inverse": true,
+  "precision_general_vector_tiny_host_flags_byte_identical_except_described_change": true,
+  "new_UB_or_GM_allocations": false,
+  "additional_kernel_launches": 0,
+  "unchanged_M_ownership_proxy_cases": 57344,
+  "B_physical_NK_matmul_layout_CPU_cases": 100,
+  "CPU_layout_error": 0,
+  "official_CANN9_sources": [
+    "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/900/API/ascendcopapi/atlasascendc_api_07_0614.html"
+  ],
+  "hardware_validation": "PENDING: compile, 15/15 zero-error, and timing remain required",
+  "known_baseline_documentation_mismatch": "v124 omitted BType ISTRANS(default false), while host/kernel both request transpose true. v124 passed hardware despite documented requirement; no universal error claim made.",
+  "performance_hypothesis": "Library layout specialization may change; no timing improvement is assumed."
+}
