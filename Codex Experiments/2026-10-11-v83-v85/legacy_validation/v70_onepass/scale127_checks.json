@@ -1,0 +1,5 @@
+{
+  "positive_finite_bits_tested": 1004573,
+  "status": "PASS",
+  "coverage": "Random fp32 incl subnormal, all exponent transitions and mantissa threshold neighbors. CPU proof, not NPU compiler validation."
+}
